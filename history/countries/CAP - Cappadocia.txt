@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = greek
+religion = orthodox
+technology_group = eastern
+capital = 1848 
+
+1040.1.1 = {
+	monarch = {
+		name = "Zoë"
+		dynasty = "Porphyrogenita"
+		birth_date = 978.6.12
+		adm = 4
+		dip = 1
+		mil = 3
+	}
+}

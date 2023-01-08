@@ -1,0 +1,17 @@
+government = republic
+add_government_reform = oligarchy_reform
+government_rank = 1
+technology_group = western
+religion = catholic
+primary_culture = sardinian
+capital = 1247	# Bastia
+
+1040.1.1 = {
+	monarch = {
+		name = "Lorenzo il Magnifico"
+		birth_date = 1449.1.1
+		adm = 6
+		dip = 4
+		mil = 3
+	}
+}

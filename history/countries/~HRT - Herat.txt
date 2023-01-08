@@ -1,0 +1,6 @@
+government = monarchy
+add_government_reform = iqta
+primary_culture = khorasani
+religion = zoroastrian
+technology_group = muslim
+capital = 446 # Herat

@@ -1,0 +1,22 @@
+bookmark =
+{
+	name = "WRATH_OF_NORSEMEN_NAME"
+	desc = "WRATH_OF_NORSEMEN_DESC"
+	date = 1040.1.1
+	center = 183
+	
+	country = ENG
+	country = SEL
+	country = KRU
+	country = SAX
+	country = ASU
+	country = KOD
+	country = SWA
+	country = FRA
+	country = BYZ
+	country = MTH
+	
+	easy_country = ENG
+	easy_country = SEL
+	easy_country = KRU
+}

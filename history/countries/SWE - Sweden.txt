@@ -1,0 +1,24 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = swedish
+religion = norse_pagan_reformed
+capital = 1	#Stockholm
+
+national_focus = MIL
+
+
+1040.1.1 = {
+	monarch = {
+		name = "Bjorn"
+		dynasty = "Svensson"
+		birth_date = 1420.12.4
+		adm = 3
+		dip = 3
+		mil = 5
+		leader = {	name = "Bjorn Skullcrusher"   type = general	fire = 1	shock = 5	manuever = 3	siege = 2 }
+	}
+
+}
+

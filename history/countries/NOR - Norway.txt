@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = norwegian
+add_accepted_culture = icelandic
+religion = norse_pagan_reformed
+technology_group = western
+historical_friend = NSE
+capital = 17 #Akershus
+
+1040.1.1 = {
+	monarch = {
+		name = "Christian Frederik"
+		dynasty = "von Oldenburg"
+		culture = danish
+		birth_date = 1786.9.18
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}

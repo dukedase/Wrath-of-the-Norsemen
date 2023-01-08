@@ -1,0 +1,18 @@
+#Galich
+
+owner = VLA
+controller = VLA
+add_core = VLA
+capital = "Galich"
+culture = russian
+religion = slavic_reformed
+trade_goods = salt
+hre = no
+base_tax = 4
+base_production = 5 #Huge Salt Mine
+base_manpower = 2
+is_city = yes
+discovered_by = eastern
+discovered_by = western
+discovered_by = GOL
+discovered_by = nomad_group

@@ -1,0 +1,95 @@
+spriteTypes = {	
+	
+	spriteType = {
+		name = "GFX_age_of_strife"
+		texturefile = "gfx/interface/ages/age_of_strife.dds"
+	}
+	
+	# Age of Strife Objectives
+	spriteType = {
+		name = "GFX_obj_have_vassals"
+		texturefile = "gfx/interface/ages/obj_have_vassals.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_obj_military_society"
+		texturefile = "gfx/interface/ages/obj_military_society.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_obj_wage_war"
+		texturefile = "gfx/interface/ages/obj_wage_war.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_obj_win_battles"
+		texturefile = "gfx/interface/ages/obj_win_battles.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_obj_conquer_lands"
+		texturefile = "gfx/interface/ages/obj_conquer_lands.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_obj_pillage_others"
+		texturefile = "gfx/interface/ages/obj_pillage_others.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_obj_spread_dynasty"
+		texturefile = "gfx/interface/ages/obj_spread_dynasty.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_obj_100_development"	
+		texturefile = "gfx/interface/ages/obj_100_development.dds"
+	}
+
+	spriteType = {
+		name = "GFX_obj_many_vassals"		
+		texturefile = "gfx/interface/ages/obj_many_vassals.dds"
+	}
+	
+### Age of Strife Abilities
+
+	spriteType = {
+		name = "GFX_per_aos_lifetime_of_war"
+		texturefile = "gfx/interface/ages/per_aos_lifetime_of_war.dds"
+	}
+
+	spriteType = {
+		name = "GFX_per_aos_manpower_recovery"
+		texturefile = "gfx/interface/ages/per_aos_manpower_recovery.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_per_aos_merc_bonus"
+		texturefile = "gfx/interface/ages/per_aos_merc_bonus.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_per_aos_army_tradition"
+		texturefile = "gfx/interface/ages/per_aos_army_tradition.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_per_aos_norse_bonus"
+		texturefile = "gfx/interface/ages/per_aos_norse_bonus.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_per_aos_novgorod_bonus"
+		texturefile = "gfx/interface/ages/per_aos_novgorod_bonus.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_per_aos_asturias_bonus"
+		texturefile = "gfx/interface/ages/per_aos_asturias_bonus.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_per_aos_seljuks_bonus"
+		texturefile = "gfx/interface/ages/per_aos_seljuks_bonus.dds"
+	}
+}

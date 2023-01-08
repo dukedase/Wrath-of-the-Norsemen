@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+religion = catholic
+primary_culture = swabian
+capital = 77
+elector = yes
+
+1040.1.1 = {
+    monarch = {
+        name = "Frederick"
+        dynasty = "Karling"
+        birth_date = 976.8.3
+		death_date = 1043.2.14
+        adm = 2
+        dip = 1
+        mil = 2
+    }
+}
+
+1040.1.1 = {
+    heir = {
+        name = "Albrecht"
+        monarch_name = "Albrecht I"
+        dynasty = "Karling"
+        birth_date = 1033.5.21
+        death_Date = 1106.5.4
+        claim = 95
+        adm = 5
+        dip = 5
+        mil = 6
+    }
+}

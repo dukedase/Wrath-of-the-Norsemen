@@ -1,0 +1,21 @@
+owner = ENG
+controller = ENG
+add_core = ENG
+culture = anglo_saxon
+religion = norse_pagan_reformed # Anything typed here will be added to all selected province history files
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = salt
+base_manpower = 3
+capital = "Chester"
+is_city = yes
+add_core = WSX
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+################################################################################
+# 4375 - Chester
+################################################################################
+latent_trade_goods = { coal }

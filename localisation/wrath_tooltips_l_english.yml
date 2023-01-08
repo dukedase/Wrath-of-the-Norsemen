@@ -1,0 +1,46 @@
+﻿l_english:
+# Scenario
+ WRATH_OF_NORSEMEN_NAME:0 "Wrath of the Norsemen"
+ WRATH_OF_NORSEMEN_DESC:0 "Europe is in chaos.  Charlemagne was not successful in Iberia or northern Germania, and upon his passing his Empire split into many feuding Kingdoms. The Karlings continue to dominate much of Christian Europe, but with Muslim incursions in Iberia, and Pagans invading from the North and East, their legitimacy is beginning to crumble.  For centuries Popes have tried to push back the heathens, but their efforts have been thus far forlorn.  Heresies continue to spring up, decaying the Popes authority even further.  However, succession troubles in England may leave the region open for conversion or conquest, and the new King of Castille seems ready to strike the Muslims in Iberia."
+# Reconquista
+ per_reconquista_info_tt:0 "§OHas not yet declared the Reconquista.§!"
+ per_spanish_knights_info_tt:0 "You will gain access to the §YCastilian Knights§! for §Gten years.§!"
+ reconquista_info_tt:0 "For the next §Gtwo years§! you can expect support in the form of men and gold to arrive to aid you in the Reconquista."
+# Austurian Tooltips
+ per_announce_alfonso_heir_tt:0 "If we make Alfonso our heir we will create a personal union with the Kingdoms of Leon and Navarra, §Gregardless of if they get an heir or not.§!"
+ per_announce_diego_heir_tt:0 "If we make Diego our heir we will only get a personal union with the Kingdoms of Leon and Navarra if they die §Rheirless.§!"
+ per_claim_toledo_tt:0 "Gain a claim on all provinces owned by §GToledo§! in §RIberia.§!"
+ per_claim_zaragoza_tt:0 "Gain a claim on all provinces owned by §GZaragoza§! in §RIberia.§!"
+ per_cas_culture_unified_tt:0 "Forming §YCastile§! will merge the §lAsturian, Leonese and Basque§! cultures into §YCastilian.§!"
+ cas_missions_military_prowess_reward_tt:0 "Gain §Gmilitary bonuses§! while at war with §RMuslims§! for the next §Y50 years.§!"
+# Seljuks
+ per_seljuk_silk_monopoly_event_tt:0 "from §YSilk§! production."
+ seljuk_silk_monopoly:0 "Seljuk Silk Monopoly"
+ per_sel_develop_the_lands_desc_tt:0 "Develop your provinces 250 times."
+ per_sel_develop_the_lands_tt:0 "Develop your provinces 250 times. Current progress is §G[Root.DevelopmentClicksVariable.GetValue]§!/§G250§!"
+ per_sel_uncontested_empire_tt:0 "Have a larger army than any §YIndian§! country"
+# Byzantines
+ per_trebizond_declares_independence_tt:0 "Trebizond becomes an independent state, taking the northern and eastern lands of Anatolia with them."
+ per_cappadocia_declares_independence_tt:0 "Cappadocia becomes and independent state, taking the central and southern lands of Anatolia with them."
+ per_byzantine_coup_tt:0 "Abdicate the throne to your consort, sending [ROOT.Monarch.GetName] into exile."
+ per_venice_threaten_ven_tt:0 "If they accept we will aquire the provinces of Salento, Lecce, Rhodes, Naxos and the remainder of Albania."
+ per_venice_offer_ven_tt:0 "If they accept we will aquire the provinces of Salento, Lecce, Rhodes, Naxos and the remainder of Albania. We will also pay them §Y200§! ducats."
+ per_byz_threaten_ven_tt:0 "Accepting will cede the provinces of Salento, Lecce, Rhodes, Naxos and the remainder of Albania. If we decline, they will §RDeclare War§! on us."
+ per_byz_offer_ven_tt:0 "If we accept they will aquire the provinces of Salento, Lecce, Rhodes, Naxos and the remainder of Albania. They will also pay us §Y200§! ducats."
+ BYZ_SURVIVED_CHAOS_TT:0 "Survived the Chaos"
+# Trade Nodes
+ baghdad:1 "Baghdad"
+ milan:1 "Milan"
+ naples:1 "Naples"
+ arabia:1 "Arabia"
+ balkans:1 "Balkans"
+ swabia:1 "Swabia"
+ algiers:1 "Algiers"
+ per_ireland_tradenode:1 "Irish Sea"
+ constantinople_node:1 "Constantinople"
+ 
+ 
+# Custom triggers and Variables
+ age_of_paganism_total_battles_won_check_ct:0 "§G[Root.AgeWinBattlesVariable.GetValue]§!/§G25§! Battles Won"
+ age_of_paganism_total_pillages_check_ct:0 "§G[Root.PillagedCounterVariable.GetValue]§!/§G5§! Enemies Pillaged"
+ cas_missions_win_battles_muslims_check_ct:0 "Win §G[Root.CasWinBattlesMuslimsVariable.GetValue]§!/§G10§! battles against Muslims."

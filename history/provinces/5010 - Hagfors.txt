@@ -1,0 +1,20 @@
+#5000 - Hagfors
+
+add_core = SVE
+owner = SVE
+controller = SVE
+culture = swedish
+religion = norse_pagan_reformed
+capital = "Hagfors"
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = grain
+base_manpower = 2
+is_city = yes
+
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

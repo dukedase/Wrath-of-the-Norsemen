@@ -1,0 +1,17 @@
+#4245 - Vyazma
+
+owner = SMO
+controller = SMO
+add_core = SMO
+culture = ryazanian
+religion = slavic_reformed
+hre = no
+base_tax = 4
+base_production = 3
+trade_goods = cloth 
+base_manpower = 2
+capital = "Vyazma"
+is_city = yes
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group

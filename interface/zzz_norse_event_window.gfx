@@ -1,0 +1,22 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_event_goto_province"
+		texturefile = "gfx//interface//event_button_banner.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		transparencecheck = yes
+	}
+}
+
+bitmapfonts = {
+	bitmapfont = {
+		name = "event_title_font"
+		path = "gfx/fonts/vic_29s"
+		color = 0xffffffff
+
+		textcolors = {
+			R = { 164 24 24 }
+			Y = { 254 206 41 }
+		}
+	}
+}

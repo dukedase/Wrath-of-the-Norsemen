@@ -1,0 +1,12 @@
+﻿l_english:
+# Reconquista
+ declare_a_reconquista_title:0 "Declare Reconquista"
+ declare_a_reconquista_desc:0 "With a stable and prestigous country, we may be able to declare a reconquista against the Muslims who are occupying Iberia. Surely the call of Glory and fighting for God would draw many warriors to our side!"
+# Form Castile
+ cas_form_decision_title:0 "Unite the Crowns"
+ cas_form_decision_desc:0 "With the union of the Three Kingdoms, Asturias, Leon, and Navarra, we have gained dominance in northern Iberia.  It is time to unite the Crowns into one - The Kingdom of Castile!"
+ cas_form_decision_militarily_title:0 "Create the Kingdom of Castile"
+ cas_form_decision_militarily_desc:0 "With much of Northern Iberia under our control, perhaps it is time to create a new Kingdom - the Kingdom of Castile!"
+# Norse Decisions 
+ change_norse_deity_decision_title:0 "Change Deity"
+ change_norse_deity_decision_desc:0 "For those with a change of faith."

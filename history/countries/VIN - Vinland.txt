@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = icelandic
+religion = norse_pagan_reformed
+technology_group = western
+capital = 981 #Akershus
+
+1040.1.1 = {
+	monarch = {
+		name = "Thorkell"
+		dynasty = "Leifson"
+		culture = icelandic
+		birth_date = 1004.11.22
+		adm = 5
+		dip = 3
+		mil = 4
+	}
+}

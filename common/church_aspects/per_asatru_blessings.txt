@@ -1,0 +1,98 @@
+strength_of_thor = {
+	is_blessing = yes
+
+	modifier = {
+		shock_damage = 0.1
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 3
+			NOT = {
+				OR = {
+					legitimacy = 70
+					republican_tradition = 70
+					devotion = 70
+				}
+			}
+		}
+	}
+}
+
+will_of_odin = {
+	is_blessing = yes
+
+	modifier = {
+		manpower_recovery_speed = 0.15
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 3
+			NOT = {
+				manpower = 4
+			}
+		}
+	}
+}
+
+beauty_of_baldr = {
+	is_blessing = yes
+
+	modifier = {
+		heir_chance = 0.5
+		prestige = 1
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			NOT = {
+				religious_unity = 0.9
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				religious_unity = 0.7
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				religious_unity = 0.5
+			}
+		}
+	}
+}
+
+lokis_trickery = {
+	is_blessing = yes
+
+	modifier = {
+		core_creation = -0.15
+		spy_offence = 0.25
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			overextension_percentage = 0.7
+		}
+		modifier = {
+			factor = 3
+			overextension_percentage = 0.5
+		}
+	}
+}
+
+tyrs_combat = {
+	is_blessing = yes
+
+	modifier = {
+		infantry_power = 0.1
+	}
+	ai_will_do = {
+		factor = 15
+	}
+}

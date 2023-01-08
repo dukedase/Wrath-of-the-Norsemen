@@ -1,0 +1,38 @@
+government = monarchy
+add_government_reform = per_seljuk_government
+government_rank = 3
+primary_culture = kirgiz
+religion = sunni
+technology_group = muslim
+capital = 441	# Sivas
+
+1040.1.1 = {
+    monarch = {
+        name = "Abu Talib Muhammad Tughril"
+        dynasty = "Seljuk"
+		culture = kirgiz
+        birth_date = 993.10.4
+        adm = 6
+        dip = 5
+        mil = 6
+		
+		leader = {
+			name = "Tughril"
+			type = general
+			fire = 1
+			shock = 5
+			manuever = 3
+			siege = 3
+		}
+    }
+	heir = {
+        name = "Muhammad bin Dawud Chaghri"
+        dynasty = "Seljuk"
+		culture = kirgiz
+        birth_date = 1029.1.20
+		death_date = 1100.1.20
+        adm = 4
+        dip = 5
+        mil = 4
+    }
+}

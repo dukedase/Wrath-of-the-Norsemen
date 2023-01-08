@@ -1,0 +1,14 @@
+#981 - Taqamkuk
+owner = VIN
+controller = VIN
+add_core = VIN
+culture = icelandic
+religion = norse_pagan_reformed
+capital = "Taqamkuk"
+trade_goods = cloth
+hre = no
+base_tax = 4 
+base_production = 4
+base_manpower = 4
+discovered_by = north_american
+discovered_by = norse

@@ -1,0 +1,27 @@
+﻿l_english:
+# Bulgaria
+ BUL_ideas:0 "Bulgarian Ideas"
+ BUL_ideas_start:0 "Bulgarian Traditions"
+ BUL_ideas_bonus:0 "Bulgarian Ambition"
+ bul_idea_1:0 "The End of The Dynastic Division"
+ bul_idea_1_desc:0 "After the death of Ivan Alexander in 1371, the Bulgarian Empire was split apart by his sons, and as a result was completely shattered.. However under the cunning skill and talent of Ivan Shishman and later his son, Fruzhin I, it would unite once more. As a result the stability of the nation has been secured for centuries to come."
+ bul_idea_2:0 "The Reformation of the Danuk System"
+ bul_idea_2_desc:0 "Enacted in 1454 by Fruzhin I Shishman, it was an effective way to reduce costs and expenses by creating a council of trustworthy and trained individuals to govern over the Bulgarian states' taxes and trade."
+ bul_idea_3:0 "The Bulgarian Army Amelioration"
+ bul_idea_3_desc:0 "With the Norse heathens to the east of us and the Byzantines to the south of us, we must adjust our training to counter these mighty foes, for Bulgaria must stand forevermore!"
+ bul_idea_4:0 "Multi-Cultural Empire"
+ bul_idea_4_desc:0 "Throughout our lifespan as a nation we had many cultures in our empire. Most notably, the Slavs, Vlachs, Romanians, and Serbs. We must accept all of these cultures to increase stability in our nation and create a propserous empire."
+ bul_idea_5:0 "Lasting Bulgaria"
+ bul_idea_5_desc:0 "The cities and landmarks left behind from the previous Bulgarian Empires are truly remarkable and show our history in shining glory.  Many travel here just to observe these monuments to our greatness!"
+ bul_idea_6:0 "The University of Sofia"
+ bul_idea_6_desc:0 "The creation of the University of Sofia was created to improve our current roster of generals to fight against our foes so we do not fall behind in martial tactics, an issue that, throughout history, has seen the end of Empires."
+ bul_idea_7:0 "Mercantilist Practices"
+ bul_idea_7_desc:0 "With heavy influence from the Venetians, we have decided to adopt their ways of trading, and their economic policy of mercantilism."
+# Germany
+ GMK_ideas:0 "German Ideas"
+ GMK_ideas_start:0 "German Traditions"
+ GMK_ideas_bonus:0 "German Ambition"
+# Iberia
+ IBE_ideas:0 "Iberian Ideas"
+ IBE_ideas_start:0 "Iberian Traditions"
+ IBE_ideas_bonus:0 "Iberian Ambition"

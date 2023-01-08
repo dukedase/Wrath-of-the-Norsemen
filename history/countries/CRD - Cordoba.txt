@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = iqta
+primary_culture = andalucian
+religion = sunni
+technology_group = muslim
+capital = 225
+government_rank = 2
+religious_school = maliki_school
+historical_rival = TOL
+historical_rival = ASU
+1040.1.1 = {
+	monarch = {
+		name = "Muhammad VII"
+		dynasty = "Nasrid"
+		birth_date = 1018.5.27
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+	add_piety = -0.3
+}

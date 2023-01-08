@@ -1,0 +1,733 @@
+per_sel_mission_tree_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	
+	potential = {
+		tag = SEL
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	has_country_shield = yes
+	
+	per_sel_exploit_persian_trade = {
+		icon = mission_into_persia_2
+		position = 1
+		required_missions = { }
+		
+		trigger = {
+			4341 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		effect = {
+			add_mercantilism = 5
+			add_years_of_income = 0.5
+		}
+	}
+	
+	per_sel_dominate_persian_trade = {
+		icon = mission_dominate_persian_gulf
+		position = 2
+		required_missions = { per_sel_exploit_persian_trade }
+		
+		trigger = {
+			4341 = {
+				trade_share = {
+					country = ROOT
+					share = 85
+				}
+			}
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = per_sel_persian_trade_mission_modifier
+				duration = 5475 # 15 Years
+			}
+		}
+	}
+	
+	per_sel_establish_silk_monopoly = {
+		icon = reform_the_monte
+		position = 3
+		required_missions = { per_sel_dominate_persian_trade }
+		
+		trigger = {
+			trading_part = {
+				trade_goods = silk
+				value = 0.1
+			}
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		effect = {
+			country_event = { ID = per_seljuk_events.2 }
+		}
+	}
+	
+	per_sel_conquer_persia = {
+		icon = mission_persian_soldiers
+		position = 4
+		required_missions = { per_sel_conquer_eastern_persia }
+		
+		trigger = {
+			persia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				region = persia_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		effect = {
+			country_event = { ID = per_seljuk_events.3 }
+			caucasia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			basra_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			iraq_arabi_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			al_jazira_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	per_sel_relentless_push_west = {
+		icon = mission_unite_west_india
+		position = 5
+		required_missions = { per_sel_conquer_persia }
+		
+		trigger = {
+			basra_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			iraq_arabi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			al_jazira_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				area = basra_area
+				area = iraq_arabi_area
+				area = al_jazira_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		effect = {
+			anatolia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			mashriq_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+per_sel_mission_tree_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	
+	potential = {
+		tag = SEL
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	has_country_shield = yes
+	
+	per_sel_destroy_herat = {
+		icon = mission_assert_control_over_delhi
+		position = 2
+		required_missions = { per_sel_rally_bannermen }
+		
+		trigger = {
+			HRT = {
+				exists = no
+			}
+			446 = {
+				owned_by = ROOT
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 446
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		effect = {
+			add_prestige = 10
+			mashhad_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			birjand_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			sistan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	per_sel_conquer_eastern_persia = {
+		icon = mission_gwalior_and_rathambore
+		position = 3
+		required_missions = { per_sel_destroy_herat }
+		
+		trigger = {
+			mashhad_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			birjand_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sistan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				area = mashhad_area
+				area = birjand_area
+				area = sistan_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		effect = {
+			country_event = { ID = per_seljuk_events.1 }
+			persia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+}
+
+per_sel_mission_tree_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	
+	potential = {
+		tag = SEL
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	has_country_shield = yes
+	
+	per_sel_rally_bannermen = {
+		icon = mission_subdue_rajputana
+		position = 1
+		required_missions = { }
+		
+		trigger = {
+			army_size_percentage = 1.0
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		effect = {
+			add_mil_power = 50
+			if = {
+				limit = {
+					exists = AFG
+				}
+				add_casus_belli = {
+					target = AFG
+					type = cb_vassalize_mission
+				}
+			}
+			herat_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	per_sel_reform_the_army = {
+		icon = mission_control_the_ganges_delta
+		position = 4
+		required_missions = { per_sel_rally_bannermen }
+		
+		trigger = {
+			army_tradition = 50
+			army_professionalism = 0.2 
+			num_of_generals = 3
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		effect = {
+			country_event = { ID = per_seljuk_events.4 }
+		}
+	}
+	
+	per_sel_seljuk_cavalry = {
+		icon = mission_abu_saids_dream
+		position = 5
+		required_missions = { per_sel_reform_the_army }
+		
+		trigger = {
+			num_of_cavalry = 50
+			army_professionalism = 0.5
+			mil_tech = 11
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		effect = {
+			country_event = { ID = per_seljuk_events.5 }
+		}
+	}
+	
+	per_sel_crush_the_romans = {
+		icon = the_latin_empire
+		position = 6
+		required_missions = { per_sel_relentless_push_west per_sel_uncontested_empire }
+		
+		trigger = {
+			BYZ = { exists = no }
+			151 = { owned_by = ROOT }
+		}
+		
+		provinces_to_highlight = {
+			province_id = 151
+			NOT = { owned_by = ROOT }
+		}
+		
+		effect = {
+			add_prestige = 50
+			add_legitimacy = 50
+			add_country_modifier = {
+				name = per_sel_crush_the_romans_modifier
+				duration = -1
+			}
+		}
+	}
+}
+
+per_sel_mission_tree_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	
+	potential = {
+		tag = SEL
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	has_country_shield = yes
+	
+	per_sel_subjugate_afghanistan = {
+		icon = mission_turning_the_tables
+		position = 2
+		required_missions = { per_sel_rally_bannermen }
+		
+		trigger = {
+			termez_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kabulistan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			balkh_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			449 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5025 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2225 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			447 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				area = termez_area
+				area = kabulistan_area
+				area = balkh_area
+				province_id = 449
+				province_id = 5025
+				province_id = 2225
+				province_id = 447
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		effect = {
+			add_prestige = 10
+			if = {
+				limit = {
+					exists = BAL
+				}
+				add_casus_belli = {
+					target = BAL
+					type = cb_vassalize_mission
+				}
+			}
+			else = {
+				all_province = {
+					limit = {
+						owned_by = BAL
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			add_country_modifier = {
+				name = per_seljuk_afghan_mission_modifier
+				duration = 7300 # 20 Years
+			}
+			if = {
+				limit = {
+					AFG = {
+						vassal_of = ROOT
+					}
+				}
+				1968 = {
+					cede_province = SEL
+					remove_core = AFG
+					add_core = SEL
+				}
+				4343 = {
+					cede_province = SEL
+					remove_core = AFG
+					add_core = SEL
+				}
+			}
+		}
+	}
+	
+	per_sel_subjugate_baluchistan = {
+		icon = mission_restore_caliphate_of_cordoba
+		position = 3
+		required_missions = { per_sel_subjugate_afghanistan }
+		
+		trigger = {
+			kalat_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			makran_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				area = kalat_area
+				area = makran_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		effect = {
+			441 = {
+				add_building = per_road_tier_one
+			}
+			444 = {
+				add_building = per_road_tier_one
+			}
+			5027 = {
+				add_building = per_road_tier_one
+			}
+			450 = {
+				add_building = per_road_tier_one
+			}
+			451 = {
+				add_building = per_road_tier_one
+			}
+			2226 = {
+				add_building = per_road_tier_one
+			}
+			578 = {
+				add_building = per_road_tier_one
+			}
+			448 = {
+				add_building = per_road_tier_one
+			}
+			577 = {
+				add_building = per_road_tier_one
+			}
+			576 = {
+				add_building = per_road_tier_one
+			}
+			2231 = {
+				add_building = per_road_tier_one
+			}
+			northern_sindh_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			sindh_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			sind_sagar_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			multan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+per_sel_mission_tree_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	
+	potential = {
+		tag = SEL
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	has_country_shield = yes
+	
+	per_sel_advised_sultan = {
+		icon = mission_ahmadabad_paper
+		position = 1
+		required_missions = { }
+		
+		trigger = {
+			employed_advisor = {
+				category = ADM
+			}
+			employed_advisor = {
+				category = DIP
+			}
+			employed_advisor = {
+				category = MIL
+			}
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = per_seljuks_mission_advised_sultan_modifier
+				duration = 5475 # 15 Years
+			}
+		}
+	}
+	
+	per_sel_develop_the_lands = {
+		icon = mission_conquer_malwa_guj
+		position = 2
+		required_missions = { per_sel_advised_sultan }
+		
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = per_sel_develop_the_lands_tt
+				check_variable = {
+					which = DevelopmentClicksVariable
+					value = 250
+				}
+			}
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = per_seljuks_develop_the_lands_mission_modifier
+				duration = 9125 # 25 Years
+			}
+		}
+	}
+	
+	per_sel_centralized_government = {
+		icon = mission_mahmudabad
+		position = 3
+		required_missions = { per_sel_develop_the_lands }
+		
+		trigger = {
+			crown_land_share = 50
+			current_income_balance = 50
+			NOT = { average_home_autonomy = 20 }
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = per_seljuks_centralized_government_mission_modifier
+				duration = -1
+			}
+		}
+	}
+	
+	per_sel_fortify_the_east = {
+		icon = mission_conquer_50_development
+		position = 4
+		required_missions = { per_sel_subjugate_baluchistan }
+		
+		trigger = {
+			578 = {
+				owned_by = ROOT
+				has_building = fort_15th
+			}
+			576 = {
+				owned_by = ROOT
+				has_building = fort_15th
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 578
+				province_id = 576
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		effect = {
+			578 = {
+				add_province_modifier = {
+					name = per_seljuks_fortify_the_east_mission_modifier
+					duration = -1
+				}
+			}
+			576 = {
+				add_province_modifier = {
+					name = per_seljuks_fortify_the_east_mission_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	per_sel_uncontested_empire = {
+		icon = mission_onward_to_lahore
+		position = 5
+		required_missions = { per_sel_fortify_the_east }
+		
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = per_sel_uncontested_empire_tt
+				NOT = {
+					any_country = {
+						capital_scope = { superregion = india_superregion }
+						army_size = ROOT
+					}
+				}
+			}
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		effect = {
+			add_stability = 1
+			add_prestige = 25
+			add_mil_power = 100
+		}
+	}
+}

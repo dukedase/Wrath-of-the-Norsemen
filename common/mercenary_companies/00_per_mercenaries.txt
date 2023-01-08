@@ -1,0 +1,15 @@
+# Spanish Knights
+
+per_castilian_reconquista_knights = {
+	regiments_per_development = 0.05
+	cavalry_weight = 1.0
+    artillery_weight = 0.0
+	cavalry_cap = 10
+	trigger = {
+		has_country_modifier = per_the_reconquista_modifier
+	}
+	modifier = {
+		cavalry_power = 0.15
+	}
+	cost_modifier = 0.5
+}

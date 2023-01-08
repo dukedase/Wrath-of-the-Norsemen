@@ -1,0 +1,83 @@
+# Reconquista 
+
+per_the_reconquista_modifier = {
+	
+}
+
+per_reconquista_active_modifier = {
+	manpower_recovery_speed = 0.5
+	land_morale = 0.05
+}
+
+# Asturias/Castile
+
+per_cas_convert_moors_modifier = {
+	global_missionary_strength = 0.02
+	missionaries = 1
+}
+
+# Muslim Scholars
+
+per_hanafi_school_modifier = {
+	global_tax_modifier = 0.15
+}
+
+per_hanbali_school_modifier = {
+	core_creation = -0.1
+}
+
+per_ismaili_school_modifier = {
+	tolerance_own = 2
+}
+
+# Seljuks 
+
+per_seljuk_mission_autonomy_modifier = {
+	global_autonomy = -0.05
+}
+
+per_seljuk_army_reform_quantity_modifier = {
+	reinforce_speed = 0.15
+	recover_army_morale_speed = 0.05
+}
+
+per_seljuk_army_reform_quality_modifier = {
+	fire_damage_received = -0.05
+}
+
+per_seljuk_army_reform_discipline_modifier = {
+	discipline = 0.05
+}
+
+per_seljuk_cavalry_reform_fire_modifier = {
+	cavalry_fire = 0.5
+	cavalry_shock = -0.5
+	fire_damage = 0.05
+}
+
+per_seljuk_cavalry_reform_shock_modifier = {
+	cavalry_shock = 0.5
+	cavalry_fire = -0.5
+	shock_damage = 0.05
+}
+
+# Byzantines
+
+per_recovering_from_the_crisis_modifier = {
+	manpower_recovery_speed = 0.25
+	global_monthly_devastation = -0.05
+	war_exhaustion = -0.03
+}
+
+per_recovering_from_the_crisis_ruler_modifier = {
+	prestige = 1
+	legitimacy = 1
+	land_morale = 0.1
+}
+
+per_city_of_the_worlds_desire_modifier = {
+	prestige = 0.5
+	legitimacy = 0.5
+	local_tax_modifier = 0.2
+	province_trade_power_modifier = 0.2
+}

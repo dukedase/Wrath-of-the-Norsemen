@@ -1,0 +1,59 @@
+per_high_king_reform = {
+	icon = "soldiers_3"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { has_country_flag = ire_form_flag }
+		OR = {
+			AND = {
+				capital_scope = {
+					province_id = 5154
+				}
+				culture_group = gaelic
+				NOT = { exists = IRE }
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = per_high_king_reform
+			}
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 50
+	nation_designer_trigger = {
+		culture_group = gaelic
+		owns = 5154
+	}
+
+	modifiers = {
+		diplomats = 1
+		envoy_travel_time = -0.25
+		vassal_income = 0.1
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+per_clan_reform = {
+	icon = "soldiers"
+	allow_normal_conversion = no
+	potential = {
+		NOT = { has_country_flag = ire_form_flag }
+		overlord = { has_reform = per_high_king_reform }
+	}
+	fixed_rank = 1
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	lock_level_when_selected = yes
+	nation_designer_trigger = {
+		culture_group = gaelic
+	}
+	modifiers = {
+		hostile_attrition = 1
+		infantry_power = 0.1
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}

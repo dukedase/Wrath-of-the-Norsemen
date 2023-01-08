@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = iqta
+primary_culture = andalucian
+religion = sunni
+technology_group = muslim
+capital = 219
+government_rank = 2
+religious_school = maliki_school
+historical_rival = ASU
+historical_rival = CRD
+historical_rival = ALM
+1040.1.1 = {
+	monarch = {
+		name = "Ismail III"
+		dynasty = "Dhunnunid"
+		birth_date = 1002.12.8
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}

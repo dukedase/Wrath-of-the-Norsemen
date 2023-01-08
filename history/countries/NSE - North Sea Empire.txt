@@ -1,0 +1,37 @@
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = anglo_saxon
+add_accepted_culture = norse_anglo
+religion = catholic
+technology_group = western
+historical_friend = DAN
+historical_friend = NOR
+capital = 243 #Sjaelland
+
+1040.1.1 = {
+	monarch = {
+		name = "Sven"
+		dynasty = "Knýtlinga"
+		birth_date = 1404.05.02
+		regent = yes
+		adm = 4
+		dip = 3
+		mil = 1
+	}
+}
+
+1040.1.1 = {
+	heir = {
+		name = "Cnut"
+		monarch_name = "Cnut VII"
+		dynasty = "Knýtlinga"
+		birth_date = 1438.02.13
+		death_date = 1481.8.28
+		claim = 100
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+	add_heir_personality = cruel_personality
+}

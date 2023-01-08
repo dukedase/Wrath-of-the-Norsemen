@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = basque
+religion = catholic
+technology_group = western
+capital = 210	# Pamplona
+historical_friend = ASU
+
+1040.1.1 = {
+	monarch = {
+		name = "Carlos III"
+		dynasty = "Jiménez"
+		birth_date = 971.6.15
+		adm = 5
+		dip = 1
+		mil = 6
+	}
+}

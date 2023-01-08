@@ -1,0 +1,45 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = western
+primary_culture = norse_irish
+add_accepted_culture = irish
+historical_friend = HSC
+religion = norse_pagan_reformed
+capital = 373	# Dublin
+
+
+1040.1.1 = {
+	monarch = {
+		name = "Ivar"
+		dynasty = "mac Gofrith"
+		adm = 3
+		dip = 3
+		mil = 6
+		birth_date = 1003.03.17
+		religion = norse_pagan_reformed
+		culture = norse_irish
+		
+		leader = {
+			name = "Ivar Mac Gofrith"
+			type = general
+			fire = 0
+			shock = 5
+			manuever = 6
+			siege = 1
+		}
+	}
+	heir = {
+		name = "Olaf"
+		monarch_name = "Olaf"
+		dynasty = "mac Gofrith"
+		birth_date = 1030.07.13
+		death_date = 1493.01.01
+		claim = 100
+		adm = 4
+		dip = 5
+		mil = 2
+		religion = norse_pagan_reformed
+		culture = norse_irish
+	}
+}

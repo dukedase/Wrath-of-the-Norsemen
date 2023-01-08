@@ -1,0 +1,31 @@
+#### Wrath Events ###
+### By Peratus ###
+
+
+namespace = per_wrath_events
+normal_or_historical_nations = yes
+
+### Wrath Events
+
+country_event = { 
+	id = per_wrath_events.1
+	title = "per_wrath_events.1.t"
+	desc = "per_wrath_events.1.desc"
+	picture = DIPLOMACY_eventPicture
+	
+	major = no
+	fire_only_once = yes
+	is_triggered_only = no
+	
+	trigger = {
+		ai = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { # Announce him as heir
+		name = "per_wrath_events.1.a"
+	}
+}

@@ -1,0 +1,23 @@
+#Kola
+
+owner = SMI
+controller = SMI
+add_core = SMI
+capital = "Kola"
+culture = sapmi
+religion = shamanism
+hre = no
+base_tax = 4
+base_production = 5
+is_city = yes
+trade_goods = fur
+base_manpower = 5
+center_of_trade = 2
+
+
+
+discovered_by = western
+discovered_by = eastern
+
+1478.1.15 = { owner = MOS controller = MOS add_core = MOS remove_core = NOV }
+1503.4.1 = { owner = RUS controller = RUS add_core = RUS remove_core = MOS }

@@ -1,0 +1,16 @@
+#Lapland, the far north wastelands.
+owner = SMI
+controller = SMI
+add_core = SMI
+capital = "Jokkmokk"
+culture = sapmi
+religion = norse_pagan_reformed
+hre = no
+base_tax = 1 
+base_production = 1
+trade_goods = fur
+base_manpower = 1
+fort_15th = yes
+discovered_by = eastern
+discovered_by = western
+

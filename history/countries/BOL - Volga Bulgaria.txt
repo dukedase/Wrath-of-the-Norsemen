@@ -1,0 +1,33 @@
+government = tribal
+add_government_reform = steppe_horde
+primary_culture = bolghar
+religion = sunni
+technology_group = nomad_group
+capital = 1082    # Bolghar
+religious_school = maliki_school
+
+1040.1.1 = {
+    monarch = {
+        name = "Ahmad II"
+        dynasty = "Mustansir"
+        birth_date = 1412.2.5
+		death_date = 1458.3.3
+        adm = 4
+        dip = 3
+        mil = 4
+    }
+}
+
+1040.1.1 = {
+    heir = {
+        name = "Aidar"
+        monarch_name = "Aidar III"
+        dynasty = "Mustansir"
+        birth_date = 1430.1.1
+        death_Date = 1482.6.2
+        claim = 95
+        adm = 4
+        dip = 3
+        mil = 3
+    }
+}

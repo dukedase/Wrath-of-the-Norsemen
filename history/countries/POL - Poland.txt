@@ -1,0 +1,27 @@
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = polish
+religion = slavic_reformed
+technology_group = eastern
+historical_rival = KRU
+capital = 262 # Krakow
+national_focus = ADM
+
+1040.1.1 = {
+	monarch = {
+		name = "Mieszko III"
+		dynasty = "Piast"
+		birth_date = 999.12.31
+		adm = 1
+		dip = 4
+		mil = 3
+	}
+	heir = {
+		name = "Casimir I"
+		dynasty = "Piast"
+		death_date = 1090.12.31
+		adm = 4
+		dip = 2
+		mil = 3
+	}
+}

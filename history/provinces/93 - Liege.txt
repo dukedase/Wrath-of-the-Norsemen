@@ -1,0 +1,21 @@
+# 93 Liège - Principal cities: Liège & Namur
+
+owner = LOT
+controller = LOT 
+add_core = LOT
+add_core = LIE
+capital = "Liège"
+is_city = yes
+culture = wallonian
+religion = catholic
+hre = yes
+base_tax = 6 
+base_production = 6
+trade_goods = glass
+base_manpower = 3
+fort_15th = yes
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+

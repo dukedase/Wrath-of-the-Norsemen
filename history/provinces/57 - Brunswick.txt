@@ -1,0 +1,21 @@
+#57 - Brunswick
+
+owner = SAX
+controller = SAX
+add_core = SAX
+culture = lower_saxon
+religion = norse_pagan_reformed
+capital = "Braunschweig"
+trade_goods = iron
+hre = no
+base_tax = 6
+base_production = 6
+base_manpower = 7
+is_city = yes
+fort_15th = yes #Strong City Fortifications
+extra_cost = 16
+center_of_trade = 2
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman

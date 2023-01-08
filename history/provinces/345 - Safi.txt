@@ -1,0 +1,18 @@
+# 345 - Safi
+owner = ALM
+controller = ALM
+add_core = ALM
+culture = moroccan # Anything typed here will be added to all selected province history files
+religion = sunni
+capital = "Safi"
+trade_goods = sugar
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+is_city = yes
+add_core = MOR
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+primary_culture = breton
+religion = catholic
+technology_group = western
+capital = 172
+
+
+1040.1.1 = {
+	monarch = {
+		name = "Jean V"
+		dynasty = "de Dreux"
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}

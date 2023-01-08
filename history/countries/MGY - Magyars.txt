@@ -1,0 +1,22 @@
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = hungarian
+religion = tengri_pagan_reformed
+technology_group = eastern
+capital = 157 # Bihar
+
+change_estate_land_share = {
+	estate = estate_church
+	share = -5
+}
+
+1387.3.31 = {
+	monarch = {
+		name = "Zoltán I"
+		dynasty = "Arpad"
+		birth_date = 1398.3.3	
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}

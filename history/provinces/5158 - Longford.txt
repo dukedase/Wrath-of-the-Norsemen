@@ -1,0 +1,19 @@
+#4118 - Boyle
+
+owner = MTH
+controller = MTH
+culture = irish
+religion = catholic
+hre = no
+base_tax = 4
+base_production = 3
+trade_goods = livestock
+base_manpower = 3
+capital = "Boyle"
+is_city = yes
+add_core = MTH
+add_core = BYL
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern

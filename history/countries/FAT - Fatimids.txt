@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = iqta
+primary_culture = bedouin_arabic
+religion = shiite
+technology_group = muslim
+capital = 361 # Cairo
+
+1040.1.1 = {
+	monarch = {
+		name = "Abu Tamim Ma'ad al-Mustansir Bi-llah"
+		dynasty = "Fatimid"
+		birth_date = 1029.7.2
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}

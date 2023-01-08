@@ -1,0 +1,13 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_holy_site_default"
+		texturefile = "gfx//interface//holy_sites//aksum.dds"
+	}
+
+	spriteType = {
+		name = "GFX_holy_site_2972"
+		texturefile = "gfx//interface//holy_sites//donars_oak.dds"
+		loadType = "INGAME"
+	}	
+
+}

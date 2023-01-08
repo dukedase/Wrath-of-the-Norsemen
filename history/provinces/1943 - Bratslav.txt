@@ -1,0 +1,21 @@
+#Bratslav/East Podolia
+
+owner = KRU
+controller = KRU
+culture = ruthenian
+religion = slavic_reformed
+hre = no
+base_tax = 5
+base_production = 3
+trade_goods = livestock 
+base_manpower = 4
+capital = "Bratslav"
+is_city = yes
+fort_15th = yes 
+add_core = KRU
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = nomad_group
+

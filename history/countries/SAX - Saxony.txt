@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = per_norse_autocracy
+government_rank = 2
+primary_culture = lower_saxon
+add_accepted_culture = saxon
+religion = norse_pagan_reformed
+technology_group = western
+capital = 2964
+elector = no
+
+1040.1.1 = {
+	monarch = {
+		name = "Theoderic"
+		dynasty = "Aldrich"
+		birth_date = 1002.7.20
+		claim = 95
+		adm = 4
+		dip = 2
+		mil = 5
+	}
+	heir = {
+		name = "Albion"
+		dynasty = "Aldrich"
+		birth_date = 1029.6.1
+		claim = 95
+		adm = 5
+		dip = 5
+		mil = 2
+	}
+}

@@ -1,0 +1,16 @@
+﻿l_english:
+# Buildings
+ per_road_tier_one:0 "Dirt Road"
+ building_per_road_tier_one:0 "Dirt Road"
+ per_road_tier_two:0 "Cobble Road"
+ building_per_road_tier_two:0 "Cobble Road"
+ per_road_tier_three:0 "Stone Road"
+ building_per_road_tier_three:0 "Stone Road"
+ per_road_tier_four:0 "Transport Tubes"
+ building_per_road_tier_four:0 "Transport Tubes"
+ 
+# Great Projects
+ theodosian_walls:0 "Theodosian Walls"
+ mount_ararat:0 "Mount Ararat"
+ grand_cothon_of_carthage:0 "Grand Cothon of Carthage"
+ library_of_baghdad:0 "House of Wisdom"

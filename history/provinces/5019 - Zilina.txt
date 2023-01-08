@@ -1,0 +1,24 @@
+#Zilina
+
+owner = MVA
+controller = MVA
+add_core = MVA
+culture = slovak
+religion = slavic_reformed
+capital = "Zilina"
+trade_goods = iron
+hre = no
+base_tax = 2
+base_production = 3
+base_manpower = 1
+is_city = yes
+add_core = SLO
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS

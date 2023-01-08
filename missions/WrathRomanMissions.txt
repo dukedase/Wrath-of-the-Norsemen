@@ -1,0 +1,105 @@
+per_sel_mission_tree_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	
+	potential = {
+		tag = BYZ
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	has_country_shield = yes
+	
+	per_byz_survive_the_crisis = {
+		icon = mission_into_persia_2
+		position = 1
+		required_missions = { }
+		
+		trigger = {
+			stability = 2
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = BYZ_SURVIVED_CHAOS_TT
+					has_country_flag = per_byz_survived_chaos_flag
+				}
+				is_year = 1100
+			}
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		effect = {
+			add_ruler_modifier = {
+				name = per_recovering_from_the_crisis_ruler_modifier
+				duration = -1
+			}
+		}
+	}
+	
+	per_byz_reform_the_military = {
+		icon = mission_into_persia_2
+		position = 2
+		required_missions = { per_byz_survive_the_crisis }
+		
+		trigger = {
+			army_size_percentage = 0.8
+			manpower_percentage = 0.5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		effect = {
+			germiyan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			ankara_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			kastamonu_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			aydin_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			karaman_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hudavendigar_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			ankara_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = aragonese
+add_accepted_culture = catalan
+add_accepted_culture = sicilian
+religion = catholic
+technology_group = western
+capital = 220 # Valencia
+add_army_professionalism = 0.05
+
+1040.1.1 = {
+	monarch = {
+		name = "Alfons"
+		dynasty = "Jiménez"
+		birth_date = 996.1.1
+		claim = 95
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}

@@ -1,0 +1,564 @@
+per_sax_mission_tree_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	
+	potential = {
+		tag = SAX
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	has_country_shield = yes
+	
+	per_sax_the_port_of_bremen = {
+		icon = reform_the_monte
+		position = 1
+		required_missions = { }
+		
+		trigger = {
+			weser_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1874 = {
+				province_has_center_of_trade_of_level = 2
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				area = weser_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		effect = {
+			1874 = {
+				add_province_modifier = {
+					name = per_sax_bremen_mission_modifier
+					duration = -1
+				}
+			}
+			north_westphalia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			westphalia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			frisia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	per_sax_protect_donars_oak = {
+		icon = reform_the_monte
+		position = 2
+		required_missions = { per_sax_the_port_of_bremen }
+		
+		trigger = {
+			north_westphalia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			westphalia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			frisia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				area = north_westphalia_area
+				area = westphalia_area
+				area = frisia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		effect = {
+			5081 = {
+				add_building = fort_15th
+			}
+			north_rhine_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_rhineland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			holland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_brabant_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	per_sax_cleanse_western_germania = {
+		icon = reform_the_monte
+		position = 3
+		required_missions = { per_sax_protect_donars_oak }
+		
+		trigger = {
+			north_rhine_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lower_rhineland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			holland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			north_brabant_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				area = north_rhine_area
+				area = lower_rhineland_area
+				area = holland_area
+				area = north_brabant_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		effect = {
+			country_event = { ID = per_saxon_events.1 } # To deal with the Christians
+		}
+	}
+}
+
+per_sax_mission_tree_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	
+	potential = {
+		tag = SAX
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	has_country_shield = yes
+	
+	per_sax_hesse_and_thuringia = {
+		icon = reform_the_monte
+		position = 1
+		required_missions = { }
+		
+		trigger = {
+			OR = {
+				AND = {
+					HES = {
+						exists = no
+					}
+					THU = {
+						exists = no
+					}
+				}
+				AND = {
+					braunschweig_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					thuringia_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					1762 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					81 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					4774 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					4716 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					4717 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					66 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				area = braunschweig_area
+				area = thuringia_area
+				province_id = 1762
+				province_id = 81
+				province_id = 4774
+				province_id = 4716
+				province_id = 4717
+				province_id = 66
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		effect = {
+			country_event = { ID = per_saxon_events.2 }
+			franconia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			palatinate_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_franconia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hesse_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			holstein_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			weser_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	per_sax_dominate_the_empire = {
+		icon = reform_the_monte
+		position = 2
+		required_missions = { per_sax_hesse_and_thuringia }
+		
+		trigger = {
+			OR = {
+				is_emperor = yes
+				NOT = { hre_size = 1 }
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		effect = {
+			south_german_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = per_sax_dominate_the_hre_modifier
+				duration = 7300 # 20 Years
+			}
+			add_country_modifier = {
+				name = per_sax_dominate_the_hre_perm_modifier
+				duration = -1 
+			}
+		}
+	}
+	
+	per_sax_arminius_dream = {
+		icon = reform_the_monte
+		position = 5
+		required_missions = { per_sax_dominate_the_empire }
+		
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 70
+				OR = {
+					region = north_german_region
+					region = south_german_region
+				}
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				region = north_german_region
+				region = south_german_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		effect = {
+			add_splendor = 800
+			add_country_modifier = {
+				name = per_sax_arminnius_dream_modifier
+				duration = 7300 # 20 Years
+			}
+		}
+	}
+}
+
+per_sax_mission_tree_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	
+	potential = {
+		tag = SAX
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	has_country_shield = yes
+	
+	per_sax_conquer_the_north = {
+		icon = reform_the_monte
+		position = 1
+		required_missions = { }
+		
+		trigger = {
+			5076 = {
+				owned_by = ROOT
+			}
+			4141 = {
+				owned_by = ROOT
+			}
+			1775 = {
+				owned_by = ROOT
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5076
+				province_id = 4141
+				province_id = 1775
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					exists = OBO
+				}
+				add_casus_belli = {
+					target = OBO
+					type = cb_vassalize_mission
+				}
+			}
+			45 = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			1857 = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			holstein_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	per_sax_deal_with_the_obotrites = {
+		icon = reform_the_monte
+		position = 2
+		required_missions = { per_sax_conquer_the_north }
+		
+		trigger = {
+			mecklenburg_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1857 = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1857
+				area = mecklenburg_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					OBO = {
+						vassal_of = ROOT 
+					}
+				}
+				OBO = {
+					add_liberty_desire = -25
+				}
+			}
+			add_prestige = 10
+			mittelmark_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			neumark_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hinter_pommern_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			vorpommern_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	per_sax_pomeranian_menace = {
+		icon = reform_the_monte
+		position = 3
+		required_missions = { per_sax_deal_with_the_obotrites }
+		
+		trigger = {
+			mittelmark_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			neumark_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hinter_pommern_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			vorpommern_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				area = mittelmark_area
+				area = neumark_area
+				area = hinter_pommern_area
+				area = vorpommern_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		effect = {
+			add_prestige = 10
+			mittelmark_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			neumark_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hinter_pommern_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			vorpommern_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

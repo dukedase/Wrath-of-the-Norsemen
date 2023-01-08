@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = iqta
+primary_culture = persian
+religion = shiite
+technology_group = muslim
+capital = 4329 # 
+
+1040.1.1 = {
+	monarch = {
+		name = "Abu Kalijar Marzuban"
+		dynasty = "Buyid"
+		birth_date = 1010.4.13	
+		adm = 4
+		dip = 1
+		mil = 2
+	}
+}

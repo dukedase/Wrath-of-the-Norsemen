@@ -1,0 +1,122 @@
+#### Reconquista Events ###
+### By Peratus ###
+
+
+namespace = per_reconquista_events
+normal_or_historical_nations = yes
+
+### Reconquista Events
+
+country_event = { 
+	id = per_reconquista_events.1
+	title = "per_reconquista_events.1.t"
+	desc = "per_reconquista_events.1.desc"
+	picture = Castilian_Knights_EventPicture
+	
+	major = no
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = reconquista_called_flag
+	}
+	
+	mean_time_to_happen = {
+		days = 1 
+	}
+	
+	option = { # Gather the knights!
+		name = "per_reconquista_events.1.a"
+		ai_chance = { factor = 100 }
+		set_country_flag = per_reconquista_active_flag
+		custom_tooltip = per_spanish_knights_info_tt
+		custom_tooltip = reconquista_info_tt
+		hidden_effect = {
+			add_country_modifier = {
+				name = per_the_reconquista_modifier
+				duration = 3650 # 10 Years
+				hidden = yes
+			}
+			country_event = { 
+				id = per_reconquista_events.4
+				days = 730
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = per_reconquista_events.2
+	title = "per_reconquista_events.2.t"
+	desc = "per_reconquista_events.2.desc"
+	picture = DIPLOMACY_eventPicture
+	
+	major = no
+	is_triggered_only = no
+	
+	trigger = {
+		has_country_flag = per_reconquista_active_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	option = { 
+		name = "per_reconquista_events.2.a"
+		ai_chance = { factor = 100 }
+		add_yearly_manpower = 0.5
+	}
+}
+
+country_event = { 
+	id = per_reconquista_events.3
+	title = "per_reconquista_events.3.t"
+	desc = "per_reconquista_events.3.desc"
+	picture = DIPLOMACY_eventPicture
+	
+	major = no
+	is_triggered_only = no
+	
+	trigger = {
+		has_country_flag = per_reconquista_active_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	option = { 
+		name = "per_reconquista_events.3.a"
+		ai_chance = { factor = 100 }
+		add_years_of_income = 0.35
+	}
+}
+
+country_event = { 
+	id = per_reconquista_events.4
+	title = "per_reconquista_events.4.t"
+	desc = "per_reconquista_events.4.desc"
+	picture = DIPLOMACY_eventPicture
+	
+	major = no
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	mean_time_to_happen = {
+	}
+	
+	immediate = {
+		clr_country_flag = per_reconquista_active_flag
+	}
+	
+	option = { 
+		name = "per_reconquista_events.4.a"
+		ai_chance = { factor = 100 }
+		add_country_modifier = {
+			name = per_reconquista_active_modifier
+			duration = 3650
+		}
+	}
+}

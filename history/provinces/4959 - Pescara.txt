@@ -1,0 +1,21 @@
+#4947 - Pescara
+
+owner = SPL
+controller = SPL
+culture = neapolitan
+religion = catholic
+capital = "Pescara"
+hre = no
+base_tax = 4
+base_production = 5
+trade_goods = iron
+base_manpower = 5
+is_city = yes
+add_core = SPL
+
+
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+religion = catholic
+primary_culture = austrian
+capital = 1863	# Graz
+elector = yes
+
+1040.1.1 = {
+	monarch = {
+		name = "Leopold"
+		dynasty = "von Ottokar"
+		birth_date = 1006.7.21
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}

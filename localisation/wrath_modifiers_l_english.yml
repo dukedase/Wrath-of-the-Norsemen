@@ -1,0 +1,30 @@
+﻿l_english:
+# Asturias/Castile
+ per_cas_convert_moors_modifier:0 "Reconversion of Iberia"
+ per_cas_prepared_for_reconquista:0 "Prepared for the Reconquista"
+ cas_missions_iron_modifier:0 "Expanded Mines"
+ cas_leadership_logistics_modifier:0 "Logistics Training"
+# Seljuks
+ per_seljuk_afghan_mission_modifier:0 "Army Logistics"
+ per_sel_persian_trade_mission_modifier:0 "Persian Trade"
+ per_seljuk_mission_conquest_of_persia_modifier:0 "Conquest of Persia"
+ per_seljuks_fortify_the_east_mission_modifier:0 "Seljuk Fortifications"
+ per_seljuks_mission_advised_sultan_modifier:0 "Well Advised Sultan"
+ per_seljuks_develop_the_lands_mission_modifier:0 "Development Expansion"
+ per_seljuks_centralized_government_mission_modifier:0 "Centralized Government"
+ per_sel_crush_the_romans_modifier:0 "Crushed the Romans"
+ per_seljuk_mission_autonomy_modifier:0 "Centralizing Government"
+ per_seljuk_army_reform_quantity_modifier:0 "Quantity Reform"
+ per_seljuk_army_reform_quality_modifier:0 "Quality Reform"
+ per_seljuk_army_reform_discipline_modifier:0 "Here, and Now"
+ per_seljuk_cavalry_reform_fire_modifier:0 "Horse Archers"
+ per_seljuk_cavalry_reform_shock_modifier:0 "Shock Cavalry"
+# Byzantines
+ per_recovering_from_the_crisis_modifier:0 "Recovering From the Crisis"
+ per_recovering_from_the_crisis_ruler_modifier:0 "Savior of Rome"
+# Province Modifiers
+per_city_of_the_worlds_desire_modifier:0 "City of the Worlds Desire"
+# Islam
+per_hanafi_school_modifier:0 "Hanafi School"
+per_hanbali_school_modifier:0 "Hanbali School"
+per_ismaili_school_modifier:0 "Ismaili School"

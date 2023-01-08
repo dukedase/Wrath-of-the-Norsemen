@@ -1,0 +1,21 @@
+#4947 - Rothbury
+
+owner = ENG
+controller = ENG
+add_core = ENG
+add_core = NOL
+culture = norse_anglo
+religion = norse_pagan_reformed
+capital = "Rothbury"
+hre = no
+base_tax = 3
+base_production = 4
+trade_goods = copper
+base_manpower = 3
+is_city = yes
+fort_15th = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

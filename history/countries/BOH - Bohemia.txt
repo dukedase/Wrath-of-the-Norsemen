@@ -1,0 +1,24 @@
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = czech
+religion = hussite
+capital = 266 # Praha
+technology_group = western
+add_accepted_culture = sorbian
+add_army_professionalism = 0.1
+elector = no
+change_estate_land_share = {
+	estate = estate_burghers
+	share = -5
+}
+
+1378.11.29 = {
+	monarch = {
+		name = "Václav IV"
+		dynasty = "von Luxemburg"
+		birth_date = 1361.2.26
+		adm = 2
+		dip = 2
+		mil = 0
+	}
+}

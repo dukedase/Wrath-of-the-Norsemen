@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = western
+primary_culture = norse_anglo
+religion = norse_pagan_reformed
+capital = 4367	
+
+
+1040.1.1 = {
+	monarch = {
+		name = "Sigurd II"
+		dynasty = "Hringr"
+		adm = 3
+		dip = 3
+		mil = 4
+		birth_date = 1410.4.5
+		religion = norse_pagan_reformed
+		culture = norse_anglo
+		
+		leader = {
+			name = "Sigurd"
+			type = general
+			fire = 0
+			shock = 3
+			manuever = 5
+			siege = 1
+		}
+	}
+}

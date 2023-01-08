@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+primary_culture = lombard
+religion = catholic
+technology_group = western
+capital = 104	# Bored dough
+
+1040.1.1 = {
+    monarch = {
+        name = "Bruno II"
+        dynasty = "Karling"
+        birth_date = 1020.4.20
+        adm = 5
+        dip = 3
+        mil = 3
+    }
+}
+

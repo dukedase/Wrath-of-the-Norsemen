@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = iqta
+primary_culture = andalucian
+religion = sunni
+technology_group = muslim
+capital = 218
+government_rank = 1
+religious_school = maliki_school
+
+1040.1.1 = {
+	monarch = {
+		name = "Basir II"
+		dynasty = "Aftasid"
+		birth_date = 994.4.19
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}

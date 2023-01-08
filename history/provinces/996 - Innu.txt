@@ -1,0 +1,14 @@
+#996 - Innu
+owner = VIN
+controller = VIN
+add_core = VIN
+culture = icelandic
+religion = norse_pagan_reformed
+capital = "Innu"
+trade_goods = fish
+hre = no
+base_tax = 2 
+base_production = 1
+base_manpower = 1
+discovered_by = north_american
+discovered_by = norse

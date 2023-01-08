@@ -1,0 +1,188 @@
+#### Seljuk Events ###
+### By Peratus ###
+
+
+namespace = per_seljuk_events
+normal_or_historical_nations = yes
+
+### Seljuk Events
+
+country_event = { # Conquest of Eastern Persia
+	id = per_seljuk_events.1
+	title = "per_seljuk_events.1.t"
+	desc = "per_seljuk_events.1.desc"
+	picture = CONQUEST_eventPicture
+	
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SEL
+	}
+	
+	mean_time_to_happen = {
+	}
+	
+	option = { 
+		name = "per_seljuk_events.1.a"
+		ai_chance = { factor = 100 }
+		add_adm_power = 100
+		add_army_tradition = 10
+		add_country_modifier = {
+			name = per_seljuk_mission_autonomy_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {  # Silk
+	id = per_seljuk_events.2
+	title = "per_seljuk_events.2.t"
+	desc = "per_seljuk_events.2.desc"
+	picture = HOUSE_OF_TRADE_eventPicture
+	
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SEL
+	}
+	
+	mean_time_to_happen = {
+	}
+	
+	option = { 
+		name = "per_seljuk_events.2.a"
+		ai_chance = { factor = 100 }
+		change_price = {
+			trade_goods = silk
+			key = seljuk_silk_monopoly
+			value = 0.25
+			duration = -1 # Permanent, until colonization
+		}
+		add_years_of_owned_provinces_production_income = {
+			years = 5
+			trigger = {
+				trade_goods = silk
+			}
+			custom_tooltip = per_seljuk_silk_monopoly_event_tt
+		}
+	}
+}
+
+country_event = { # Conquest of Persia
+	id = per_seljuk_events.3
+	title = "per_seljuk_events.3.t"
+	desc = "per_seljuk_events.3.desc"
+	picture = BATTLE_eventPicture
+	
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SEL
+	}
+	
+	mean_time_to_happen = {
+	}
+	
+	option = { 
+		name = "per_seljuk_events.3.a"
+		ai_chance = { factor = 100 }
+		add_prestige = 25
+		add_legitimacy = 25
+		add_country_modifier = {
+			name = per_seljuk_mission_conquest_of_persia_modifier
+			duration = -1
+		}
+	}
+}
+
+country_event = { # Army Reform
+	id = per_seljuk_events.4
+	title = "per_seljuk_events.4.t"
+	desc = "per_seljuk_events.4.desc"
+	picture = MILITARY_CAMP_eventPicture
+	
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SEL
+	}
+	
+	mean_time_to_happen = {
+	}
+	
+	option = { 
+		name = "per_seljuk_events.4.a"
+		ai_chance = { factor = 40 }
+		add_country_modifier = {
+			name = per_seljuk_army_reform_quantity_modifier
+			duration = -1
+		}
+	}
+	
+	option = { 
+		name = "per_seljuk_events.4.b"
+		ai_chance = { factor = 40 }
+		add_country_modifier = {
+			name = per_seljuk_army_reform_quality_modifier
+			duration = -1
+		}
+	}
+	
+	option = { 
+		name = "per_seljuk_events.4.c"
+		ai_chance = { factor = 20 }
+		add_country_modifier = {
+			name = per_seljuk_army_reform_discipline_modifier
+			duration = 3650 # 10 Years
+		}
+	}
+}
+
+country_event = { # Cavalry Reform
+	id = per_seljuk_events.5
+	title = "per_seljuk_events.5.t"
+	desc = "per_seljuk_events.5.desc"
+	picture = LAND_MILITARY_eventPicture
+	
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SEL
+	}
+	
+	mean_time_to_happen = {
+	}
+	
+	option = { 
+		name = "per_seljuk_events.5.a"
+		ai_chance = { factor = 60 }
+		add_country_modifier = {
+			name = per_seljuk_cavalry_reform_fire_modifier
+			duration = -1
+		}
+	}
+	
+	option = { 
+		name = "per_seljuk_events.5.b"
+		ai_chance = { factor = 30 }
+		add_country_modifier = {
+			name = per_seljuk_cavalry_reform_shock_modifier
+			duration = -1
+		}
+	}
+	
+	option = { 
+		name = "per_seljuk_events.5.c"
+		ai_chance = { factor = 10 }
+	}
+}

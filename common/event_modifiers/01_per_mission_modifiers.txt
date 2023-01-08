@@ -1,0 +1,105 @@
+# Peratus Modifiers
+
+# Asturias/Castile
+
+per_cas_prepared_for_reconquista = {
+	land_morale = 0.05
+	manpower_recovery_speed = 0.15
+	reinforce_cost_modifier = -0.15
+}
+
+cas_missions_iron_modifier = {
+	trade_goods_size = 1.0
+}
+
+cas_military_prowess_modifier = { # Hidden
+}
+
+cas_leadership_logistics_modifier = {
+	reinforce_speed = 0.15
+	land_attrition = -0.15
+	global_supply_limit_modifier = 0.25
+}
+
+per_asu_mission_navarra_fort_modifier = {
+	fort_level = 1
+	local_defensiveness = 0.15
+	local_hostile_movement_speed = -0.15
+}
+
+per_asu_missions_completed_the_reconquista_modifier = {
+	culture_conversion_cost = -0.1
+	church_loyalty_modifier = 0.1
+	ae_impact = -0.1
+}
+
+per_cas_iberian_trade_modifier = {
+	trade_efficiency = 0.1
+}	
+
+per_cas_world_class_port_modifier = {
+	province_trade_power_modifier = 0.2
+	blockade_force_required = 0.5
+	allowed_num_of_manufactories = 1
+}
+
+# Saxony
+
+per_sax_bremen_mission_modifier = {
+	trade_value = 1
+	trade_goods_size = 1
+}
+
+per_sax_dominate_the_hre_modifier = {
+	core_creation = -0.2
+	missionaries = 1
+}
+
+per_sax_dominate_the_hre_perm_modifier = {
+	land_morale = 0.1
+}
+
+per_sax_arminnius_dream_modifier = {
+	prestige_decay = -0.01
+	diplomatic_reputation = 1
+	monthly_splendor = 2
+}
+
+# Seljuks
+
+per_seljuk_afghan_mission_modifier = {
+	land_attrition = -0.25
+}
+
+per_sel_persian_trade_mission_modifier = {
+	global_trade_goods_size_modifier = 0.1
+}
+
+per_seljuk_mission_conquest_of_persia_modifier = {
+	cavalry_power = 0.05
+	governing_capacity = 100
+}
+
+per_seljuks_fortify_the_east_mission_modifier = {
+	fort_level = 1
+}
+
+per_seljuks_mission_advised_sultan_modifier = {
+	advisor_cost = -0.15
+}
+
+per_seljuks_develop_the_lands_mission_modifier = {
+	development_cost = -0.1
+	global_institution_spread = 0.25
+}
+
+per_seljuks_centralized_government_mission_modifier = {
+	monarch_admin_power = 1
+	yearly_corruption = -0.05
+}
+
+per_sel_crush_the_romans_modifier = {
+	prestige = 1
+	legitimacy = 1
+	land_morale = 0.1
+}

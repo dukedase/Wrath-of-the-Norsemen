@@ -1,0 +1,35 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+primary_culture = occitain
+add_accepted_culture = occitain
+religion = catholic
+technology_group = western
+capital = 2753	# Bored dough
+historical_rival = FRA
+elector = yes
+1040.1.1 = {
+    monarch = {
+        name = "Charles VI"
+        dynasty = "Karling"
+        birth_date = 1003.9.23
+        adm = 3
+        dip = 2
+        mil = 3
+    }
+}
+
+1040.1.1 = {
+    heir = {
+        name = "Louis"
+        monarch_name = "Louis VII"
+        dynasty = "Karling"
+        birth_date = 1039.1.1
+        claim = 95
+        adm = 1
+        dip = 1
+        mil = 1
+    }
+}
+
+

@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = principality
+government_rank = 2
+technology_group = eastern
+religion = norse_pagan_reformed
+primary_culture = ruthenian
+capital = 280	# Kiev
+
+1040.1.1 = {
+	monarch = {
+		name = "Yaroslav"
+		monarch_name = "Yaroslav 'the Wise'"
+		dynasty = "Rurikid"
+		birth_date = 978.12.10
+		adm = 5
+		dip = 5
+		mil = 4
+	}
+}

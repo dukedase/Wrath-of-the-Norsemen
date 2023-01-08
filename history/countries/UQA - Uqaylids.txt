@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = iqta
+primary_culture = kurdish
+religion = sunni
+technology_group = muslim
+capital = 411 
+
+1040.1.1 = {
+	monarch = {
+		name = "Qirwash ibn al-Muqallad"
+		dynasty = "Uqaylid"
+		birth_date = 983.2.27
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}

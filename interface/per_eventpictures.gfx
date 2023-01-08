@@ -1,0 +1,9 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "Castilian_Knights_EventPicture"
+		texturefile = "gfx/event_pictures/Castilian_Knights_EventPicture.dds"
+		alwaystransparent = yes
+	}
+
+}

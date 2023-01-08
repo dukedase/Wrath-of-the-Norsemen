@@ -1,0 +1,86 @@
+chaos_of_the_11th_century = {
+	potential = {
+		normal_or_historical_nations = yes
+		tag = BYZ
+		is_free_or_tributary_trigger = yes
+		NOT = { has_country_flag = had_chaos_of_the_11th_century }
+	}
+	can_start = {
+		tag = BYZ 
+		NOT = { stability = 3 }
+	}
+	can_stop = {
+		stability = 3
+		is_year = 1060
+	}
+	progress = {
+		modifier = {
+			factor = 10
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 5
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 5
+			NOT = { stability = 2 }
+		}
+		modifier = {
+			factor = 10
+			NOT = { legitimacy = 100 }
+		}
+		modifier = {
+			factor = 5
+			NOT = { legitimacy = 75 }
+		}
+		modifier = {
+			factor = 5
+			NOT = { legitimacy = 50 }
+		}
+	}
+	can_end = {
+		OR = {
+			AND = {
+				stability = 2
+				NOT = { num_of_rebel_armies = 1 }
+				NOT = { num_of_rebel_controlled_provinces = 1 }
+				NOT = { corruption = 2 }
+				NOT = { num_of_loans = 10 }
+				is_at_war = no
+			}
+			AND = {
+				ai = yes
+				is_year = 1045
+			}
+		}
+	}
+	modifier = {
+		global_unrest = 10
+		stability_cost_modifier = 0.25
+		global_tax_modifier = -0.25
+		technology_cost = 0.25
+		idea_cost = 0.25
+	}
+	
+	on_start = per_byzantine_events.1
+	on_end = per_byzantine_events.2
+	
+	on_monthly = {
+		events = {
+		}
+		random_events = {
+			1000 = 0
+			100 = per_byzantine_events.3
+			100 = per_byzantine_events.4
+			75 = per_byzantine_events.5
+			50 = per_byzantine_events.6
+			50 = per_byzantine_events.7
+			100 = per_byzantine_events.8
+			50 = per_byzantine_events.9
+			200 = per_byzantine_events.10
+			50 = per_byzantine_events.11
+			25 = per_byzantine_events.12
+		}
+	}
+}

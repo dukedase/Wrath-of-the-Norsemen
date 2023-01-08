@@ -1,0 +1,19 @@
+#Heidenheim
+
+owner = SWA
+controller = SWA
+add_core = SWA
+culture = swabian
+religion = catholic
+hre = yes
+base_tax = 5
+base_production = 4
+trade_goods = grain
+base_manpower = 4
+capital = "Heidenheim"
+is_city = yes
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman

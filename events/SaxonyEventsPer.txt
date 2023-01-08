@@ -1,0 +1,117 @@
+#### Saxon Events ###
+### By Peratus ###
+
+
+namespace = per_saxon_events
+normal_or_historical_nations = yes
+
+### Saxon Events
+
+country_event = { 
+	id = per_saxon_events.1
+	title = "per_saxon_events.1.t"
+	desc = "per_saxon_events.1.desc"
+	picture = DIPLOMACY_eventPicture
+	
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SAX
+	}
+	
+	mean_time_to_happen = {
+	}
+	
+	option = { # Announce him as heir
+		name = "per_saxon_events.1.a"
+		ai_chance = { factor = 90 }
+		define_heir = {
+			dynasty = ROOT
+			age = 21
+			adm = 3
+			dip = 5
+			mil = 2
+			claim = 50
+			name = "Alfonso"
+		}
+		custom_tooltip = per_announce_alfonso_heir_tt
+		LON = {
+			set_country_flag = alfonso_heir_of_asturias_flag
+		}
+		NAV = {
+			set_country_flag = alfonso_heir_of_asturias_flag
+		}
+	}
+	option = { # Our own prince will do better
+		name = "per_saxon_events.1.b"
+		ai_chance = { factor = 10 }
+		define_heir = {
+			dynasty = ROOT
+			age = 13
+			adm = 5
+			dip = 4
+			mil = 4
+			claim = 50
+			name = "Diego"
+		}
+		custom_tooltip = per_announce_diego_heir_tt
+	}
+	option = { # I do not like either option!
+		name = "per_saxon_events.1.c"
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = { 
+	id = per_saxon_events.2
+	title = "per_saxon_events.2.t"
+	desc = "per_saxon_events.2.desc"
+	picture = DIPLOMACY_eventPicture
+	
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SAX
+	}
+	
+	mean_time_to_happen = {
+	}
+	
+	option = { # Establish the Sudmarsch
+		name = "per_saxon_events.2.a"
+		ai_chance = { factor = 90 }
+		SUD = {
+			inherit = THU
+			inherit = HES
+			define_ruler = {
+				name = "Alaric 'the Skullcrusher'"
+				dynasty = "Aldrich"
+				adm = 3
+				dip = 3
+				mil = 6
+				age = 27
+				claim = 100
+				define_ruler_to_general = {
+					fire = 2
+					shock = 5
+					manuever = 5
+					siege = 2
+				}
+			}
+			4773 = {
+				cede_province = SAX
+				add_core = SAX 
+				remove_core = SUD
+			}
+		}
+		create_march = SUD
+	}
+	option = { # I do not like either option!
+		name = "per_saxon_events.2.c"
+		ai_chance = { factor = 10 }
+	}
+}

@@ -1,0 +1,14 @@
+#2573 - Placientia
+owner = VIN
+controller = VIN
+add_core = VIN
+culture = icelandic
+religion = norse_pagan_reformed
+capital = "Placentia"
+trade_goods = fish
+hre = no
+base_tax = 3
+base_production = 2
+base_manpower = 3
+discovered_by = north_american
+discovered_by = norse

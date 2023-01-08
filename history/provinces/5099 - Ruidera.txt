@@ -1,0 +1,21 @@
+#4947 - La Roda
+
+owner = CRD
+controller = CRD
+culture = andalucian
+religion = sunni
+capital = "Ruidera"
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = wool
+base_manpower = 2
+is_city = yes
+add_core = CRD
+fort_15th = yes
+
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

@@ -1,0 +1,145 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new dieties, make sure they are uniquely named.
+
+perun =
+{
+	development_cost = -0.1
+	global_missionary_strength = 0.02
+	
+	allow = { religion = slavic_reformed }
+	sprite = 7
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}
+	}
+}
+
+veles =
+{
+	manpower_in_true_faith_provinces = 0.33
+	global_unrest = -4
+	
+	allow = { religion = slavic_reformed }
+	sprite = 8
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_balanced
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_colonialist
+		}
+	}
+}
+
+svarog =
+{
+	leader_land_shock = 1
+	shock_damage = 0.15
+	
+	allow = { religion = slavic_reformed }
+	sprite = 9
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			NOT = { num_of_cities = 5 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { num_of_cities = 10 }
+		}
+		modifier = {
+			factor = 0.5
+			num_of_cities = 30
+		}
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_capitalist
+		}		
+	}
+}
+
+jarilo =
+{
+	ship_durability = 0.1
+	discipline = 0.05
+	
+	allow = { religion = slavic_reformed }
+	sprite = 10
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_balanced
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_colonialist
+		}		
+	}
+}
+
+svantevit =
+{
+	trade_efficiency = 0.15
+	global_trade_goods_size_modifier = 0.1
+	
+	allow = { religion = slavic_reformed }
+	sprite = 11
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}	
+		modifier = {
+			factor = 2
+			personality = ai_colonialist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}		
+	}
+}
+
+
+lada =
+{
+	technology_cost = -0.1
+	build_cost = -0.2
+	
+	allow = { religion = slavic_reformed }
+	sprite = 12
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_diplomat
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}		
+	}
+}

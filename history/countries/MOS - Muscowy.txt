@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = principality
+government_rank = 1
+primary_culture = russian
+religion = slavic_reformed
+technology_group = eastern
+historical_rival = NOV
+capital = 295 # Moskva
+fixed_capital = 295 # Cannot move capital away from this province & no power cost to move to it
+
+national_focus = ADM
+
+1040.1.1 = {
+	monarch = {
+		name = "Vasiliy I"
+		dynasty = "Rurikovich"
+		adm = 1
+		dip = 3
+		mil = 2
+	}
+}

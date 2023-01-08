@@ -1,0 +1,28 @@
+per_eastern_roman_reform = {
+	icon = "king"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			tag = BYZ
+			is_playing_custom_nation = yes
+		}
+	}
+	lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	nation_designer_trigger = {
+		has_dlc = "Common Sense"
+	}
+	modifiers = {
+		land_maintenance_modifier = -0.1
+		governing_capacity = 100
+	}
+
+	conditional = {
+		allow_banners = yes
+	}
+
+	custom_attributes = {
+		
+	}
+}

@@ -1,0 +1,94 @@
+# Ireland
+dependency = {
+	subject_type = "irish_clan"
+	first = MTH
+	second = MCM
+	start_date = 1040.1.1
+	end_date = 1821.1.1
+}
+
+dependency = {
+	subject_type = "irish_clan"
+	first = MTH
+	second = DMS
+	start_date = 1040.1.1
+	end_date = 1821.1.1
+}
+dependency = {
+	subject_type = "irish_clan"
+	first = MTH
+	second = ORD
+	start_date = 1040.1.1
+	end_date = 1821.1.1
+}
+dependency = {
+	subject_type = "irish_clan"
+	first = MTH
+	second = MNS
+	start_date = 1040.1.1
+	end_date = 1821.1.1
+}
+dependency = {
+	subject_type = "irish_clan"
+	first = MTH
+	second = FLY
+	start_date = 1040.1.1
+	end_date = 1821.1.1
+}
+dependency = {
+	subject_type = "irish_clan"
+	first = MTH
+	second = BYL
+	start_date = 1040.1.1
+	end_date = 1821.1.1
+}
+dependency = {
+	subject_type = "irish_clan"
+	first = MTH
+	second = CNN
+	start_date = 1040.1.1
+	end_date = 1821.1.1
+}
+dependency = {
+	subject_type = "irish_clan"
+	first = MTH
+	second = SLN
+	start_date = 1040.1.1
+	end_date = 1821.1.1
+}
+dependency = {
+	subject_type = "irish_clan"
+	first = MTH
+	second = TRY
+	start_date = 1040.1.1
+	end_date = 1821.1.1
+}
+dependency = {
+	subject_type = "irish_clan"
+	first = MTH
+	second = TYR
+	start_date = 1040.1.1
+	end_date = 1821.1.1
+}
+
+# Finland
+
+# Bulgaria
+
+# France
+
+vassal = {
+	first = FRA
+	second = NRM
+	start_date = 1040.1.1
+	end_date = 1821.1.1
+}
+
+vassal = {
+	first = LOT 
+	second = AAC
+	start_date = 1040.1.1
+	end_date = 1821.1.1
+}
+
+# Persia

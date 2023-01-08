@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+religion = catholic
+primary_culture = austrian
+capital = 134	# Vienna
+
+
+1040.1.1 = {
+	monarch = {
+		name = "Wilhelm I"
+		dynasty = "von Steffanholf"
+		adm = 4
+		dip = 2
+		mil = 4
+	}
+}

@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+primary_culture = kirgiz
+religion = sunni
+technology_group = muslim
+capital = 329	# Sivas
+
+1040.1.1 = {
+    monarch = {
+        name = "Abu Talib Muhammad Tughril"
+        dynasty = "Seljuk"
+		culture = kirgiz
+        birth_date = 993.5.3
+		death_date = 1063.10.4
+        adm = 5
+        dip = 4
+        mil = 6
+		
+		leader = {
+			name = "Tughril"
+			type = general
+			fire = 1
+			shock = 5
+			manuever = 3
+			siege = 3
+		}
+    }
+}

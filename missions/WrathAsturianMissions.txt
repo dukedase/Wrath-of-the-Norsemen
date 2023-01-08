@@ -1,0 +1,602 @@
+per_cas_mission_tree_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	
+	potential = {
+		tag = ASU
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	has_country_shield = yes
+	
+	per_cas_economic_reforms = {
+		icon = reform_the_monte
+		position = 1
+		required_missions = { }
+		
+		trigger = {
+			monthly_income = 12
+			NOT = { num_of_loans = 3 }
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		effect = {
+			add_adm_power = 100
+			add_prestige = 10
+		}
+	}
+	
+	per_cas_expand_iron_mines = {
+		icon = reform_the_monte
+		position = 3
+		required_missions = { per_cas_economic_reforms }
+		
+		trigger = {
+			5095 = {
+				owned_by = ROOT
+				development = 20
+				base_production = 10
+			}
+			209 = {
+				owned_by = ROOT
+				development = 20
+				base_production = 10
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5095
+				province_id = 209
+			}
+		}
+		
+		effect = {
+			5095 = {
+				add_province_modifier = {
+					name = cas_missions_iron_modifier
+					duration = -1
+				}
+			}
+			209 = {
+				add_province_modifier = {
+					name = cas_missions_iron_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	per_cas_control_iberian_trade = {
+		icon = reform_the_monte
+		position = 4
+		required_missions = { }
+		
+		trigger = {
+			224 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		effect = {
+			add_years_of_income = 0.5
+			add_country_modifier = {
+				name = per_cas_iberian_trade_modifier
+				duration = 3650
+			}
+		}
+	}
+	
+	per_cas_world_class_trade_port = {
+		icon = reform_the_monte
+		position = 5
+		required_missions = { per_cas_control_iberian_trade }
+		
+		trigger = {
+			224 = {
+				owned_by = ROOT
+				development = 30
+				province_has_center_of_trade_of_level = 3
+			}
+		}
+		
+		provinces_to_highlight = {
+			province_id = 224
+		}
+		
+		effect = {
+			224 = {
+				add_province_modifier = {
+					name = per_cas_world_class_port_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+per_cas_mission_tree_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	
+	potential = {
+		tag = ASU
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	has_country_shield = yes
+	
+	per_cas_secure_leon = {
+		icon = reform_the_monte
+		position = 1
+		required_missions = { }
+		
+		trigger = {
+			leon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				area = leon_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		effect = {
+			change_dip = 1
+			add_legitimacy = 10
+		}
+	}
+	
+	per_cas_king_of_leon = {
+		icon = reform_the_monte
+		position = 2
+		required_missions = { per_cas_secure_leon }
+		
+		trigger = {
+			leon_area = {
+				type = all
+				owned_by = ROOT
+			}
+			4553 = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				area = leon_area
+				province_id = 4553
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		effect = {
+			add_prestige = 20
+			leon_area = {
+				type = all
+				remove_core = LON
+			}
+			4553 = {
+				remove_core = LON
+			}
+			if = {
+				limit = {
+					leon_area = {
+						type = all
+						NOT = { is_core = ROOT }
+					}
+					4553 = {
+						NOT = { is_core = ROOT }
+					}
+				}
+				leon_area = {
+					type = all
+					add_core = ROOT
+				}
+				4553 = {
+					add_core = ROOT
+				}
+			}
+		}
+	}
+	
+	per_cas_conquest_of_toledo = {
+		icon = reform_the_monte
+		position = 3
+		required_missions = { per_cas_prepare_for_reconquista }
+		
+		trigger = {
+			TOL = { exists = no }
+			per_salamanca_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			toledo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			per_tarancon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				area = per_salamanca_area
+				area = toledo_area
+				area = per_tarancon_area
+			}
+		}
+		
+		effect = {
+			country_event = { ID = per_asturian_events.3 }
+		}
+	}
+}
+
+per_cas_mission_tree_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	
+	potential = {
+		tag = ASU
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	has_country_shield = yes
+	
+	per_cas_improve_relations_with_leon = { # Thanks Blyatsie
+		icon = the_emden_company
+		position = 1
+		required_missions = {  }
+		
+		trigger = {
+			has_heir = yes
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		effect = {
+			add_prestige = 10
+			add_stability = 1
+		}
+	}
+	
+	per_cas_prepare_for_reconquista = {
+		icon = austria_prospers
+		position = 2
+		required_missions = { per_cas_improve_relations_with_leon }
+		
+		trigger = {
+			stability = 1 
+			army_size_percentage = 0.85
+			manpower_percentage = 0.85
+		}
+		
+		provinces_to_highlight = {
+		
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = per_cas_prepared_for_reconquista
+				duration = 3650 # 10 years
+			}
+			country_event = { ID = per_asturian_events.2 }
+		}
+	}
+	
+	per_cas_conquer_cordoba = {
+		icon = austria_prospers
+		position = 4
+		required_missions = { per_cas_conquest_of_toledo per_cas_conquest_of_zaragoza }
+		
+		trigger = {
+			225 = {
+				owned_by = ROOT
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 225
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		effect = {
+			country_event = { ID = per_asturian_events.5 }
+		}
+	}
+	
+	per_cas_end_the_sultanate = {
+		icon = austria_prospers
+		position = 5
+		required_missions = { per_cas_conquer_cordoba }
+		
+		trigger = {
+			per_murcia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			upper_andalucia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			per_cordoba_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			valencia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lower_andalucia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			extremadura_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				area = per_murcia_area
+				area = upper_andalucia_area
+				area = per_cordoba_area
+				area = valencia_area
+				area = lower_andalucia_area
+				area = extremadura_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		effect = {
+			add_adm_power = 100
+			add_mil_power = 100
+		}
+	}
+	
+	per_cas_expel_moors = {
+		icon = austria_prospers
+		position = 6
+		required_missions = { per_cas_end_the_sultanate }
+		
+		trigger = {
+			iberia_region = {
+				type = all
+				NOT = { owner = { religion_group = muslim } }
+			}
+		}
+		
+		provinces_to_highlight = {
+			AND = {
+				region = iberia_region
+				owner = { religion_group = muslim }
+			}
+		}
+		
+		effect = {
+			add_papal_influence = 25
+			add_legitimacy = 50
+			add_prestige = 50
+			country_event = { ID = per_asturian_events.6 }
+		}
+	}
+}
+
+per_cas_mission_tree_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	
+	potential = {
+		tag = ASU
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	has_country_shield = yes
+	
+	per_cas_deal_with_navarra = {
+		icon = reform_the_monte
+		position = 1
+		required_missions = { }
+		
+		trigger = {
+			NAV = { exists = no }
+			210 = {
+				owned_by = ROOT
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 210
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		
+		effect = {
+			add_mil_power = 50
+			define_advisor = {
+				type = fortification_expert
+				skill = 2
+				culture = asturian
+				religion = catholic
+				discount = yes
+			}
+		}
+	}
+	
+	per_cas_fortify_navarra = {
+		icon = reform_the_monte
+		position = 2
+		required_missions = { per_cas_deal_with_navarra }
+		
+		trigger = {
+			210 = {
+				owned_by = ROOT
+				has_building = fort_15th
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 210
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		
+		effect = {
+			210 = {
+				add_province_modifier = {
+					name = per_asu_mission_navarra_fort_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	per_cas_conquest_of_zaragoza = {
+		icon = reform_the_monte
+		position = 3
+		required_missions = { per_cas_prepare_for_reconquista }
+		
+		trigger = {
+			ZAR = { exists = no }
+			aragon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			catalonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			baleares_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4550 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			220 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					region = iberia_region
+					owned_by = ZAR
+				}
+				area = aragon_area
+				area = catalonia_area
+				area = baleares_area
+				province_id = 4550
+				province_id = 220
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		effect = {
+			213 = {
+				add_center_of_trade_level = 1
+			}
+			220 = {
+				add_center_of_trade_level = 1
+			}
+		}
+	}
+}
+
+per_cas_mission_tree_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	
+	potential = {
+		tag = ASU
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	has_country_shield = yes
+	
+	per_cas_leadership_logistics = {
+		icon = reform_the_monte
+		position = 1
+		required_missions = { }
+		
+		trigger = {
+			army_tradition = 50
+			num_of_generals = 1
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = cas_leadership_logistics_modifier
+				duration = 5475 # 15 years
+			}
+		}
+	}
+	
+	per_cas_military_prowess = {
+		icon = reform_the_monte
+		position = 3
+		required_missions = { per_cas_leadership_logistics }
+		
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = cas_missions_win_battles_muslims_check_ct
+				check_variable = {
+					which = CasWinBattlesMuslimsVariable
+					value = 10
+				}
+			}
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		effect = {
+			custom_tooltip = cas_missions_military_prowess_reward_tt
+			hidden_effect = {
+				add_country_modifier = {
+					name = cas_military_prowess_modifier
+					duration = 18250 # 50 years
+					hidden = yes
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = saxon
+religion = slavic_reformed
+technology_group = western
+capital = 62 # Leipzig
+elector = no
+
+1423.1.1 = {
+	heir = {
+		name = "Friedrich"
+		monarch_name = "Friedrich II"
+		dynasty = "von Wettin"
+		birth_date = 1412.8.22
+		death_date = 1464.9.7
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 0
+	}
+}

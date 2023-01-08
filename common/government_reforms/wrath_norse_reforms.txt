@@ -1,0 +1,289 @@
+# Tier 1
+
+per_norse_autocracy = {
+	icon = "king"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			religion = norse_pagan_reformed
+			is_playing_custom_nation = yes
+		}
+	}
+	lock_level_when_selected = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	nation_designer_trigger = {
+		has_dlc = "Common Sense"
+	}
+	modifiers = {
+		core_creation = -0.05
+	}
+
+	conditional = {
+	}
+
+	custom_attributes = {
+		
+	}
+}
+
+per_norse_feudalism = {
+	icon = "king"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			religion = norse_pagan_reformed
+			is_playing_custom_nation = yes
+		}
+	}
+	lock_level_when_selected = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	nation_designer_trigger = {
+		has_dlc = "Common Sense"
+	}
+	modifiers = {
+		manpower_recovery_speed = 0.05
+		vassal_income = 0.1
+	}
+
+	conditional = {
+	}
+
+	custom_attributes = {
+		
+	}
+}
+
+# Tier 2
+
+per_royal_berserkers = {
+	icon = "king"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			religion = norse_pagan_reformed
+			is_playing_custom_nation = yes
+		}
+	}
+	lock_level_when_selected = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	nation_designer_trigger = {
+		has_dlc = "Common Sense"
+	}
+	modifiers = {
+		church_influence_modifier = 0.1
+		church_loyalty_modifier = 0.1
+	}
+
+	conditional = {
+		allow_cawa = yes
+	}
+
+	custom_attributes = {
+		
+	}
+}
+
+per_train_berserkers = {
+	icon = "king"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			religion = norse_pagan_reformed
+			is_playing_custom_nation = yes
+		}
+	}
+	lock_level_when_selected = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	nation_designer_trigger = {
+		has_dlc = "Common Sense"
+	}
+	modifiers = {
+		land_morale = 0.1
+	}
+
+	conditional = {
+	}
+
+	custom_attributes = {
+		
+	}
+}
+
+per_train_berserkers = {
+	icon = "king"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			religion = norse_pagan_reformed
+			is_playing_custom_nation = yes
+		}
+	}
+	lock_level_when_selected = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	nation_designer_trigger = {
+		has_dlc = "Common Sense"
+	}
+	modifiers = {
+		land_morale = 0.1
+	}
+
+	conditional = {
+	}
+
+	custom_attributes = {
+		
+	}
+}
+
+# Tier 3
+
+per_strengthen_the_thing = {
+	icon = "king"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			religion = norse_pagan_reformed
+			is_playing_custom_nation = yes
+		}
+	}
+	lock_level_when_selected = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	nation_designer_trigger = {
+		has_dlc = "Common Sense"
+	}
+	modifiers = {
+		legitimacy = 1
+		yearly_corruption = -0.02
+		nobles_loyalty_modifier = 0.1
+		nobles_influence_modifier = 0.1
+	}
+
+	conditional = {
+	}
+
+	custom_attributes = {
+		
+	}
+}
+
+per_weaken_the_thing = {
+	icon = "king"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			religion = norse_pagan_reformed
+			is_playing_custom_nation = yes
+		}
+	}
+	lock_level_when_selected = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	nation_designer_trigger = {
+		has_dlc = "Common Sense"
+	}
+	modifiers = {
+		prestige = 0.5
+		stability_cost_modifier = -0.1
+		nobles_loyalty_modifier = -0.05
+		nobles_influence_modifier = -0.05
+	}
+
+	conditional = {
+	}
+
+	custom_attributes = {
+		
+	}
+}
+
+per_dissolve_the_thing = {
+	icon = "king"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			religion = norse_pagan_reformed
+			is_playing_custom_nation = yes
+		}
+	}
+	lock_level_when_selected = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	nation_designer_trigger = {
+		has_dlc = "Common Sense"
+	}
+	modifiers = {
+		global_autonomy = -0.05
+		nobles_loyalty_modifier = -0.1
+		nobles_influence_modifier = -0.1
+	}
+
+	conditional = {
+	}
+
+	custom_attributes = {
+		
+	}
+}
+
+# Tier 4
+
+per_written_law = {
+	icon = "king"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			religion = norse_pagan_reformed
+			is_playing_custom_nation = yes
+		}
+	}
+	lock_level_when_selected = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	nation_designer_trigger = {
+		has_dlc = "Common Sense"
+	}
+	modifiers = {
+		idea_cost = -0.1
+	}
+
+	conditional = {
+	}
+
+	custom_attributes = {
+		
+	}
+}
+
+per_empower_the_lawspeaker = {
+	icon = "king"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			religion = norse_pagan_reformed
+			is_playing_custom_nation = yes
+		}
+	}
+	lock_level_when_selected = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	nation_designer_trigger = {
+		has_dlc = "Common Sense"
+	}
+	modifiers = {
+		diplomats = 1
+		advisor_cost = -0.1
+	}
+
+	conditional = {
+	}
+
+	custom_attributes = {
+		
+	}
+}
