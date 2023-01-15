@@ -1,0 +1,3 @@
+#These are tags in India, Tibet, and Baluchistan.\
+GDR = "countries/Gedrosia.txt" #Nestorian Baluchistan. Gedrosoi is the Greek name for the Baluchi people.
+MYL = "countries/Malayalama.txt" #Christian kingdom in Deccan and Coromandal. 
