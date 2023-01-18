@@ -3,7 +3,7 @@
 -- NDefines.NDiplomacy.MAX_CLIENT_STATES = 20
 
 NDefines.NGame.START_DATE = "1040.1.1"
-NDefines.NGame.END_DATE = "1444.1.1",
+NDefines.NGame.END_DATE = "1444.1.1"
 NDefines.NGame.DAYS_BEHIND_PAUSE = 40
 NDefines.NGame.DAYS_BEHIND_LOWER_SPEED = 25
 
