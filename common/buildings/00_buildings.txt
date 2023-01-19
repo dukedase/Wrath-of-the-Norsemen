@@ -995,7 +995,6 @@ tradecompany = {
 		cloves
 		fur
 		incense
-		little_black_squash_balls
 	}
 	onmap = yes
 

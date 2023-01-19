@@ -113,7 +113,7 @@ per_train_berserkers = {
 	}
 }
 
-per_train_berserkers = {
+per_other_berserkers = {
 	icon = "king"
 	allow_normal_conversion = no
 	potential = {

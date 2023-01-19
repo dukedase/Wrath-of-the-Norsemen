@@ -1,3 +1,8 @@
+# Institutions
+birthplace_of_guilds = {
+	trade_goods_size_modifier = 0.25 
+}
+
 # Reconquista 
 
 per_the_reconquista_modifier = {

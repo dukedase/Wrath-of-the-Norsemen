@@ -14,23 +14,6 @@ on_startup = {
 		which = CasWinBattlesMuslimsVariable
 		value = 0
 	}
-	if = {
-		limit = {
-			current_age = age_of_discovery
-		}
-		LXA = {
-			if = {
-				limit = {
-					NOT = { has_country_flag = lxa_loyalty_flag }
-				}
-				add_estate_loyalty = {
-					estate = estate_church
-					loyalty = -10
-				}
-				set_country_flag = lxa_loyalty_flag
-			}
-		}
-	}
 	emperor = {
 		save_global_event_target_as = Emperor
 	}
@@ -53,31 +36,6 @@ on_startup = {
 		remove_country_modifier = tur_janissary
 	}
 	initialize_schools_effect = yes #This is only used here but is used for readability of on_action file.
-
-	if = {
-		limit = {
-			NOT = { has_country_flag = new_flavour_bav_13_has_been_triggered }
-			OR = {
-				tag = UBV
-				tag = LBV
-				tag = ING
-			}
-		}
-		set_country_flag = new_flavour_bav_13_has_been_triggered
-		country_event = { id = new_flavour_bav.13 days = 90 } #better not to allow almost instant DOWs
-	}
-	if = {
-		limit = {
-			tag = FRA
-			started_in = 1789.7.14
-			NOT = { is_year = 1790 }
-			NOT = { has_disaster = french_revolution }
-		}
-		add_disaster_progress = {
-			value = 100
-			disaster = french_revolution
-		}
-	}
 	if = {
 		limit = {
 			exists = SUK
@@ -483,88 +441,6 @@ on_war_won = {
 			}
 		}
 	}
-
-	if = {
-		limit = {
-			tag = MLO
-			NOT = { has_country_flag = emp_mlo_won_war_with_swiss_mercs }
-			any_hired_mercenary_company = {
-				home_province = {
-					OR = {
-						area = switzerland_area
-						area = romandie_area
-					}
-				}
-			}
-		}
-		set_country_flag = emp_mlo_won_war_with_swiss_mercs
-	}
-	
-	if = {
-		limit = {
-			is_hiring_condottiere_from = SWI
-		}
-		SWI = { set_country_flag = won_condottiere_war }
-		if = {
-			limit = {
-				tag = PAP
-			}
-			SWI = {
-				set_country_flag = hired_to_pope
-			}
-		}
-	}
-	
-	if = {
-		limit = {
-			primary_culture = melanesian
-			NOT = { has_country_modifier = warlord_mod }
-		}
-		FROM = {
-			country_event = {
-				id = polynesian.17
-			}
-		}
-	}
-	if = {
-		limit = {
-			ROOT = { 
-				tag = SWE
-				has_country_modifier = swe_vasa_leads_the_rebellion
-				is_subject = no
-			}
-			FROM = { tag = DAN }
-		}
-		country_event = {
-			id = flavor_swe.111
-		}
-	}
-	if = {
-		limit = {
-			ROOT = { 
-				tag = SWE
-				has_country_modifier = swe_any_vasa_leads_the_rebellion
-				is_subject = no
-			}
-			FROM = { tag = DAN }
-		}
-		country_event = {
-			id = flavor_swe.105
-		}
-	}
-	if = {
-		limit = {
-			ROOT = { 
-				tag = SWE
-				has_country_flag = swe_declared_independence_war
-				is_subject = no
-			}
-			FROM = { tag = DAN }
-		}
-		country_event = {
-			id = flavor_swe.121
-		}
-	}
 }
 
 # country
@@ -586,54 +462,6 @@ on_main_war_won = {
 		add_horde_unity = 5
 		add_republican_tradition = 2
 	}
-	if = {
-		limit = {
-			has_country_modifier = swe_fight_for_independence
-			NOT = { has_country_flag = swe_defeated_denmark }
-			FROM = { tag = DAN }
-		}
-		set_country_flag = swe_defeated_denmark
-	}
-	if = {
-		limit = { 
-			has_country_flag = nor_norwegian_independence_modifier 
-			is_subject = no
-			FROM = { tag = DAN }
-		}
-		clr_country_flag = nor_norwegian_independence_modifier
-		remove_country_modifier = nor_norwegian_independence_war_mod
-	}
-	if = {
-		limit = {
-			ROOT = {
-				religion = jewish
-				has_church_aspect = judaism_purim_teachings_aspect
-			}
-		}
-		add_church_power = 75
-	}
-	if = {
-		limit = {
-			has_country_flag = nor_norwegian_independence_modifier
-			is_subject = no
-		}
-		clr_country_flag = nor_norwegian_independence_modifier
-		remove_country_modifier = nor_norwegian_independence_war_mod
-	}
-	if = {
-		limit = {
-			ROOT = {
-				has_mission = swe_devastate_the_christians
-				NOT = { mission_completed = swe_devastate_the_christians }
-				religion = norse_pagan_reformed
-			}
-			FROM = { religion_group = christian }
-		}
-		change_variable = {
-			which = swe_won_wars_against_christians
-			value = 1
-		}
-	}
 	events = {
 		native_americans.7
 	}
@@ -642,20 +470,6 @@ on_main_war_won = {
 # country
 # root = winning country, from = loser country
 on_separate_war_won = {
-	if = {
-		limit = {
-			ROOT = {
-				has_mission = swe_devastate_the_christians
-				NOT = { mission_completed = swe_devastate_the_christians }
-				religion = norse_pagan_reformed
-			}
-			FROM = { religion_group = christian }
-		}
-		change_variable = {
-			which = swe_won_wars_against_christians
-			value = 1
-		}
-	}
 }
 
 # country
@@ -670,25 +484,6 @@ on_war_lost = {
 		}
 		change_government_to_monarchy = yes
     }
-	if = {
-		limit = {
-			FROM = { is_emperor = yes }
-			NOT = { has_country_flag = reined_in_for_shadow_kingdom }
-			NOT = { has_global_flag = italians_leave_hre }
-			is_emperor = no
-			is_part_of_hre = yes
-			OR = {
-				capital_scope = { region = italy_region }
-				AND = {
-					culture_group = latin
-					any_owned_province = {
-						region = italy_region
-					}
-				}
-			}
-		}
-		set_country_flag = reined_in_for_shadow_kingdom
-	}
 	add_country_modifier = {
 		name = just_lost_war_timer
 		duration = 10
@@ -706,35 +501,14 @@ on_separate_war_lost = {
 on_battle_won_country = {
 	if = {
 		limit = {
-			ROOT = {
-				tag = ALB
-				NOT = { has_country_flag = albanian_victory }
-			}
-			FROM = {
-				tag = TUR
+			AND = {
+				tag = ASU
 			}
 		}
-		ROOT = { set_country_flag = albanian_victory }
-	}
-	if = {
-		limit = {
-			ROOT = {
-				religion = jewish
-				has_church_aspect = judaism_purim_teachings_aspect
-			}
+		change_variable = {
+			which = CasWinBattlesMuslimsVariable
+			value = 1
 		}
-		ROOT = {
-			add_war_exhaustion = -0.05
-		}
-	}
-	count_won_battles_and_reward_at_end = {
-		counting_flag = teu_crusader_battle_counter
-		max_value = 20
-		effect = "
-			country_event = {
-				id = flavor_teu.12
-			}
-		"
 	}
 	if = {
 		limit = {
@@ -782,36 +556,6 @@ on_battle_lost_country = {
 # province
 # root = location, from = loser country
 on_battle_won_province = {
-	if = {
-		limit = {
-			from = { tag = REB }
-			owner = {
-				tag = ENG
-				has_disaster = war_of_the_roses
-				has_country_modifier = wotr_one_year_timer
-				NOT = { has_country_flag = war_of_the_roses_pretender_fled }
-			}
-		}
-		owner = { country_event = { id = war_of_the_roses.200 days = 2 } }
-	}
-	if = {
-		limit = {
-			from = {
-				tag = REB
-				is_rebel_type = revolutionary_rebels
-			}
-			owner = {
-				any_owned_province = {
-					region = root
-					has_revolution_in_province = yes
-				}
-				NOT = { has_disaster = french_revolution }
-				NOT = { has_disaster = revolution }
-				NOT = { has_spawned_rebels = revolutionary_rebels }
-			}
-		}
-		owner = { country_event = { id = center_of_revolution.1600 } }
-	}
 	random_events = {
 		1000 = 0
 		100 = war_of_the_roses.6	# WotR - Rebel Leaders Captured
@@ -820,99 +564,10 @@ on_battle_won_province = {
 
 #Unit Scope OnAction for Battle Won
 on_battle_won_unit = {
-	if = {
-		limit = {
-			unit_owner = { ai = no } #Scopes to Unit Owner from Unit Scope
-			general_with_steam_name = yes #Unit Scope Trigger
-		}
-		unit_owner = { set_country_flag = general_with_steam_name_won_battle }
-	}
-	if = {
-		limit = {
-			general_with_name = "Damarwulan"
-		}
-		unit_owner = {
-			change_variable = {
-				which = DamarwulanWinVariable 
-				value = 1
-			}
-		}
-	}
-	if = {
-		limit = {
-			general_with_name = "Damarwulan"
-			unit_owner = {
-				check_variable = {
-					which = DamarwulanWinVariable
-					value = 5
-				}
-			}
-		}
-		unit_owner = {
-			country_event = { id = majapahit.2 days = 2 }
-		}
-	}
-	if = {
-		limit = {
-			unit_owner = {
-				mission_completed = son_military_expertise
-				NOT = { mission_completed = son_win_battles }
-			}
-		}
-		unit_owner = {
-			change_variable = {
-				which = son_fight_counter
-				value = 1
-			}
-		}
-		if = {
-			limit = {
-				is_ruler_commanding_unit = yes
-			}
-			unit_owner = {
-				change_variable = {
-					which = son_fight_counter
-					value = 1
-				}
-			}
-		}
-	}
-	if = {
-		limit = {
-			unit_owner = {
-				has_government_attribute = winning_battles_increases_legitimacy
-			}
-			is_ruler_commanding_unit = yes
-		}
-		unit_owner = {
-			add_legitimacy = 0.5
-			add_devotion = 0.5
-			add_republican_tradition = 0.1
-			add_revolutionary_zeal = 0.1
-			add_absolutism = 0.1
-		}
-	}
 }
 
 # #Unit Scope OnAction for Battle Lost
 on_battle_lost_unit = {
-    if = {
-        limit = {
-            unit_owner = {
-                tag = MNG
-                has_ruler_flag = mng_militry_incompetence
-            }
-            is_ruler_commanding_unit = yes
-			enemy_unit = {
-				unit_owner = {
-					tag = OIR
-				}
-			}
-        }
-        OIR = {
-            country_event = { id = flavor_oir.2 }
-        }
-    }
 }
 
 # province
@@ -951,82 +606,6 @@ on_battle_lost_province = {
 # country
 # root = winning country, from = location
 on_siege_won_country = {
-	if = {
-		limit = {
-			from = { owned_by = SAX }
-			OR = {
-				is_in_war = {
-					defenders = root
-					defenders = THU
-					defenders = emperor
-					attackers = SAX
-				}
-				is_in_war = {
-					attackers = root
-					attackers = THU
-					attackers = emperor
-					defenders = SAX
-				}
-			}
-			THU = {
-				dynasty = "von Wettin"
-				is_elector = no
-				is_emperor = no
-				alliance_with = emperor
-			}
-			SAX = {
-				is_elector = yes
-				all_owned_province = {
-					NOT = { controlled_by = SAX }
-					OR = {
-						controlled_by = THU
-						controller = {
-							OR = {
-								is_in_war = {
-									defenders = this
-									defenders = THU
-									defenders = emperor
-									attackers = SAX
-								}
-								is_in_war = {
-									attackers = this
-									attackers = THU
-									attackers = emperor
-									defenders = SAX
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		THU = { country_event = { id = flavor_sax.10 } } # Ask Emperor for Saxon Electorate
-	}
-	if = {
-		limit = {
-			ROOT = {
-				religion = jewish
-				has_church_aspect = judaism_remember_passover_aspect
-			}
-			FROM = {
-				owner = {
-					war_with = ROOT
-				}
-				fort_level = 1
-			}
-		}
-		ROOT = {
-			add_church_power = 5
-		}
-	}
-	grant_manpower_from_capital_slave_raid = yes
-	events = {
-		tyw_events.14 # Fall of Prague in Religious War
-		flavor_oir.5 # Oirats capture Beijing
-		flavor_lna.1 # Emerald Buddha
-		flavor_son.14 # Djenne surrenders to Songhai Trigger
-		flavor_teu.25 # Payback for the Hussite Wars
-	}
 	random_events = {
 		10 = army_professionalism_events.1 #City Sacked
 		100 = 0
@@ -1053,47 +632,6 @@ on_siege_lost_country = {
 on_siege_won_province = {
 	events = {
 		synthetic_dawn.4
-	}
-	if = {
-		limit = {
-			from = {
-				tag = REB
-				is_rebel_type = revolutionary_rebels
-			}
-			owner = {
-				any_owned_province = {
-					region = root
-					has_revolution_in_province = yes
-				}
-				NOT = { has_disaster = french_revolution }
-				NOT = { has_disaster = revolution }
-				NOT = { has_spawned_rebels = revolutionary_rebels }
-			}
-		}
-		owner = { country_event = { id = center_of_revolution.1600 } }
-	}
-	if = {
-		limit = {
-			superregion = china_superregion
-			controller = {
-				has_government_attribute = has_unify_china_cb
-				OR = {
-					is_in_war = {
-						attacker_leader = this
-						casus_belli = cb_chinese_unification
-					}
-					is_in_war = {
-						defender_leader = this
-						casus_belli = cb_chinese_unification
-					}
-				}
-				NOT = { is_core = ROOT }
-			}
-		}
-		controller = { 
-			add_core = ROOT
-			remove_claim = ROOT
-		}
 	}
 }
 
@@ -1183,22 +721,6 @@ on_new_monarch = {
 	if = {
 		limit = { has_any_heir_cult_active = yes }
 		remove_heir_cult = yes
-	}
-	if = {
-		limit = { 
-			has_government_attribute = kalmar_union_succession
-			has_regency = no
-			has_consort_regency = no
-		}
-		if = {
-			limit = { has_country_flag = dan_new_elected_ruler }
-			clr_country_flag = dan_new_elected_ruler
-		}
-		else = {
-			country_event = {
-				id = kalmar_union_events.1	# A new king of the Kalmar Union
-			}
-		}
 	}
 	if = {
 		limit = { has_government_attribute = absolutism_reduction_on_ruler_death }
@@ -4693,34 +4215,6 @@ on_regiment_recruited = {
 
 # THIS = Province, FROM = Country, ROOT = Merc Unit
 on_mercenary_recruited = {
-	if = {
-		limit = {
-			FROM = { has_not_free_mercs_trait = yes }
-			is_not_free_merc_company = yes
-			OR = {
-				FROM = { NOT = { has_country_flag = oyo_cavalry_do_not_consume_ap } }
-				ROOT = { NOT = { mercenary_company = merc_oyo_cavalry } }
-			}
-		}
-		if = {
-			limit = {
-				FROM = { 
-					OR = {
-						has_country_flag = fifty_percent_merc_army_professionalism_cost 
-						has_country_modifier = pol_cheap_ap_mercs_modifier
-					}
-				}
-			}
-			FROM = {
-				add_army_professionalism = -0.025
-			}
-		}
-		else = {
-			FROM = {
-				add_army_professionalism = -0.05
-			}
-		}
-	}
 }
 
 # THIS = One province in the state
@@ -4863,10 +4357,6 @@ on_create_vassal = {
 		add_government_reform = papacy_reform
 		adopt_reform_progress = FROM
 	}
-	if = {
-		limit = { NOT = { is_year = 1445 } }
-		set_country_flag = released_in_1444
-	}
 }
 
 # ROOT = Country establishing it
@@ -4905,16 +4395,6 @@ on_raid_coast = {
 		add_power_projection = {
 			type = high_sea_power_projection
 			amount = 1
-		}
-	}
-	if = {
-		limit = {
-			has_mission = dan_raid_the_north_sea
-			NOT = { mission_completed = dan_raid_the_north_sea } 
-		}
-		change_variable = {
-			which = num_of_raided_coasts
-			value = 1
 		}
 	}
 }
@@ -5247,27 +4727,6 @@ on_estate_removed = {
 		}
 		remove_country_modifier = dhimmi_building_restrictions
 	}
-	if = {
-		limit = {
-			has_country_modifier = swe_debt_with_the_clergy
-			NOT = { has_estate = estate_church }
-		}
-		remove_country_modifier = swe_debt_with_the_clergy
-	}
-	if = {
-		limit = {
-			has_country_modifier = swe_debt_with_the_burghers
-			NOT = { has_estate = estate_burghers }
-		}
-		remove_country_modifier = swe_debt_with_the_burghers
-	}
-	if = {
-		limit = {
-			has_country_modifier = swe_debt_with_the_nobles
-			NOT = { has_estate = estate_nobles }
-		}
-		remove_country_modifier = swe_debt_with_the_nobles
-	}
 }
 
 ##scope = colony province, FROM = owner country or province if there's a minority expulsion source
@@ -5355,28 +4814,6 @@ on_colonist_boosting_colony = {
 
 #ROOT = converted country, FROM = country which force converts ROOT, on_action gets called on Force religion peace and Enforce Religion subject interaction
 on_force_conversion = {
-	#if = {	#Commented out for now because Catholicism has received a lot of buffs already.
-	#	limit = {
-	#		FROM = { religion = catholic }
-	#	}
-	#	if = {
-	#		limit = { ROOT = { government_rank = 3 } }
-	#		FROM = { add_papal_influence = 20 }
-	#	}
-	#	else_if = {
-	#		limit = { ROOT = { government_rank = 2 } }
-	#		FROM = { add_papal_influence = 10 }
-	#	}
-	#	else = {
-	#		FROM = { add_papal_influence = 5 }
-	#	}
-	#}
-	FROM = {
-		if = {
-			limit = { has_country_modifier = liv_protector_of_the_catholics }
-			add_papal_influence = 25
-		}
-	}
 }
 
 on_institution_embracement = {
@@ -5444,33 +4881,9 @@ consort_on_shipwreck = {
 #ROOT = country
 on_defender_of_faith_loss = {
 	clr_country_flag = claimed_defender_of_faith_flag
-	remove_country_modifier = liv_the_livonian_defender
-	remove_country_modifier = gov_improved_defender_of_faith_mod
-	remove_country_modifier = pol_shield_against_catholicism_modifier
 }
 on_defender_of_faith_claim = {
 	set_country_flag = claimed_defender_of_faith_flag
-	if = {
-		limit = {
-			religion = catholic
-			has_country_flag = liv_proclaim_defender_of_faith
-			NOT = { has_country_modifier = liv_the_livonian_defender }
-		}
-		add_country_modifier = {
-			name = liv_the_livonian_defender
-			duration = -1
-			desc = liv_the_livonian_defender_tt
-		}
-	}
-	if = {
-		limit = {
-			has_government_attribute = improved_defender_of_faith
-		}
-		add_country_modifier = {
-			name = gov_improved_defender_of_faith_mod
-			duration = -1
-		}
-	}
 }
 on_hre_dismantled = {
 }
@@ -5479,27 +4892,6 @@ on_new_age = {
 
 #ROOT = province
 on_adm_exploited = {
-	if = {
-		limit = { owner = { has_government_attribute = may_not_reduce_tax_on_exploitation } }
-		random = {
-			chance = 50
-			add_base_tax = 1
-		}
-	}
-	if = {
-		limit = { owner = { has_government_attribute = may_not_reduce_tax_on_own_exploitation culture_group = ROOT } }
-		random = {
-			chance = 25
-			add_base_tax = 1
-		}
-	}
-	if = {
-		limit = { owner = { has_government_attribute = may_not_reduce_tax_on_foreign_exploitation NOT = { culture_group = ROOT } } }
-		random = {
-			chance = 50
-			add_base_tax = 1
-		}
-	}
 }
 on_dip_exploited = {
 }

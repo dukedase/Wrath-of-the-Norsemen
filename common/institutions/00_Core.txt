@@ -17,7 +17,7 @@
 feudalism = {
 
 	bonus = {
-		free_leader_pool = 1
+		development_cost = -0.05
 	}
 
 	trade_company_efficiency = 0.2
@@ -107,13 +107,13 @@ feudalism = {
 				}
 			}
 			AND = {
-				is_year = 1600
+				is_year = 1100
 				owner = {
 					NOT = { has_reform = siberian_tribe }
 					NOT = { has_reform = steppe_horde }
 				}
 			}
-			is_year = 1700
+			is_year = 1150
 		}
 	}
 	
@@ -271,10 +271,10 @@ feudalism = {
 # Flows from italy
 #######################################
 
-renaissance = {
+guilds = {
 
 	bonus = {
-		development_cost = -0.05
+		production_efficiency = 0.05
 		build_cost = -0.05
 	}
 
@@ -282,21 +282,21 @@ renaissance = {
 
 
 	historical_start_date = 1050.1.1
-	historical_start_province = 116 # Florence
+	historical_start_province = 70 # Stuttgart
 
 	history = {
 		OR = {
 			AND = {
 				is_year = 1050
-				region = italy_region
+				region = south_german_region
 			}
 			
 			AND = {
-				is_year = 1050
+				is_year = 1060
 				continent = europe
 			}
 			AND = {
-				is_year = 1500
+				is_year = 1100
 				owner = {
 					NOT = { technology_group = north_american }
 					NOT = { technology_group = mesoamerican }
@@ -306,7 +306,7 @@ renaissance = {
 				superregion = south_america_superregion
 			}
 			AND = {
-				is_year = 1500
+				is_year = 1100
 				owner = {
 					NOT = { technology_group = north_american }
 					NOT = { technology_group = mesoamerican }
@@ -316,7 +316,7 @@ renaissance = {
 				superregion = north_america_superregion
 			}
 			AND = {
-				is_year = 1500
+				is_year = 1100
 				owner = {
 					NOT = { technology_group = north_american }
 					NOT = { technology_group = mesoamerican }
@@ -326,28 +326,27 @@ renaissance = {
 				superregion = central_america_superregion
 			}
 			AND = {
-				is_year = 1600
+				is_year = 1050
 				continent = asia
 				owner = {
 					NOT = { government = tribal }
 				}
 			}
-			is_year = 1780
+			is_year = 1070
 		}
 	}
 	
 	can_start = {
-		is_year = 1450
+		is_year = 1050
 		is_institution_enabled = feudalism
-		region = italy_region
+		continent = europe
 		is_state = yes
-		NOT = { province_id = 126 }
 		is_island = no
 		OR = {
 			development = 20
 			is_capital = yes
 			normal_or_historical_nations = no
-			is_year = 1475
+			is_year = 1050
 		}
 	}
 	start_chance = 5		#in 100 for when a province can_start
@@ -373,7 +372,7 @@ renaissance = {
 			custom_trigger_tooltip = {
 				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_renaissance
 				any_friendly_coast_border_province = {
-					renaissance = 100
+					guilds = 100
 				}
 			}
 		}
@@ -383,7 +382,7 @@ renaissance = {
 			potential = {
 				NOT = {
 					any_friendly_coast_border_province = {
-						renaissance = 100
+						guilds = 100
 					}
 				}
 			}
@@ -391,7 +390,7 @@ renaissance = {
 				tooltip = tooltip_any_neighbor_has_embraced_renaissance
 				any_neighbor_province = {
 					NOT = { owned_by = ROOT }
-					renaissance = 100
+					guilds = 100
 				}
 			}
 		}
@@ -447,25 +446,6 @@ renaissance = {
 			}
 		}
 		modifier = {
-			factor = 0.5
-			scale = yes
-			potential = {
-				OR = {
-					area = flanders_area
-					area = tuscany_area
-					area = venetia_area
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = tooltip_flanders_tuscany_venetia
-				OR = {
-					area = flanders_area
-					area = tuscany_area
-					area = venetia_area
-				}
-			}
-		}
-		modifier = {
 			factor = 5
 			scale = yes
 			potential = {
@@ -481,7 +461,7 @@ renaissance = {
 				}
 				owner = {
 					is_colonial_nation = yes
-					overlord = { has_institution = renaissance }
+					overlord = { has_institution = guilds }
 				}
 			}
 		}
@@ -490,7 +470,7 @@ renaissance = {
 			scale = yes
 			potential = {
 				owner = {
-					has_institution = renaissance
+					has_institution = guilds
 				}
 			}
 			
@@ -498,7 +478,7 @@ renaissance = {
 				tooltip = tooltip_renaissance_embraced
 				is_owned_by_trade_company = no
 				owner = {
-					has_institution = renaissance
+					has_institution = guilds
 				}
 			}
 		}
